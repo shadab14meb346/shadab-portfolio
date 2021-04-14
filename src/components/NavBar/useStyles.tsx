@@ -3,18 +3,35 @@ import {makeStyles} from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
 	navbar: {
 		height: 88,
-		background: theme.palette.primary.light,
+		background: theme.palette.primary.dark,
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "space-between",
 		paddingLeft: theme.spacing(10),
 		paddingRight: theme.spacing(10),
+		[theme.breakpoints.down("sm")]: {
+			paddingLeft: theme.spacing(2),
+			paddingRight: theme.spacing(2),
+			height: 72,
+		},
 	},
 	navBarItemsSection: {
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "space-between",
-		// alignSelf: "flex-end",
 		minWidth: "30%",
+		[theme.breakpoints.down("sm")]: {
+			display: "none",
+		},
+	},
+	hiddenUpSM: {
+		[theme.breakpoints.up("sm")]: {
+			display: "none",
+		},
+	},
+	hiddenDownSM: {
+		[theme.breakpoints.down("sm")]: {
+			display: "none",
+		},
 	},
 }));

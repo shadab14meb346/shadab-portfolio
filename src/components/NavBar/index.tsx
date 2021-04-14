@@ -1,10 +1,10 @@
 import {useState} from "react";
 import {Typography} from "@material-ui/core";
+import Image from "next/image";
 
 import NavBarItem from "./NavBarItem";
 import {useStyles} from "./useStyles";
 import {NavBarItemsType} from "./types";
-
 const NavBar = () => {
 	const classes = useStyles();
 	const [activeItem, setActiveItem] = useState<NavBarItemsType>(
@@ -15,6 +15,9 @@ const NavBar = () => {
 			<section>
 				<Typography variant="h3">Shadab.A</Typography>
 			</section>
+			<div className={classes.hiddenUpSM}>
+				<Image width={24} height={24} src="/menu_burger_icon.svg" />
+			</div>
 			<section className={classes.navBarItemsSection}>
 				<NavBarItem
 					title="Experience"

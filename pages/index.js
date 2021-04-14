@@ -1,4 +1,3 @@
-import {Typography} from "@material-ui/core";
 import Head from "next/head";
 
 import HeroSection from "../src/components/HeroSection";
@@ -8,10 +7,11 @@ export default function Home() {
 	return (
 		<div>
 			<Head>
-				<title>Create Next App</title>
+				<title>Md Shadab Alam</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<NavBar />
+			<HeroSection />
 		</div>
 	);
 }

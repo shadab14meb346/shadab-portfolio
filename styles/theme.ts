@@ -26,6 +26,7 @@ const theme = createMuiTheme({
 		},
 		text: {
 			primary: "#ffffff",
+			secondary: "#8491A0",
 		},
 		grey: {
 			"50": "#8491A0",
@@ -52,6 +53,10 @@ const theme = createMuiTheme({
 				fontSize: "55px",
 				fontWeight: 700,
 				lineHeight: "66.17px",
+				[defaultTheme.breakpoints.down("sm")]: {
+					fontSize: "32px",
+					lineHeight: "38.5px",
+				},
 			},
 			h3: {
 				fontFamily: "Sen-Regular",

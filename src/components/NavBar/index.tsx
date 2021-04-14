@@ -13,7 +13,7 @@ const NavBar = () => {
 	return (
 		<nav className={classes.navbar}>
 			<section>
-				<Typography variant="h3">Shadab.A</Typography>
+				<Typography variant="h3">Shadab.Alam</Typography>
 			</section>
 			<div className={classes.hiddenUpSM}>
 				<Image width={24} height={24} src="/menu_burger_icon.svg" />

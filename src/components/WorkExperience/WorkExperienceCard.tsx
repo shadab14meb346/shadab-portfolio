@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Typography} from "@material-ui/core";
+import {Box, Link, Typography} from "@material-ui/core";
 
 import {useStyles} from "./useStyles";
 import {ICompanyDetails} from "./pastCompanies";
@@ -27,7 +27,13 @@ const WorkExperienceCard = ({
 			</Typography>
 			<Box display="flex">
 				<Typography variant="h3">
-					{companyDetails.name}, {position}
+					<Link
+						target="_blank"
+						href={companyDetails.website}
+						style={{color: companyDetails.color}}>
+						{companyDetails.name}
+					</Link>
+					, {position}
 				</Typography>
 			</Box>
 

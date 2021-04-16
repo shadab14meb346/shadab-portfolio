@@ -3,6 +3,7 @@ import {Typography} from "@material-ui/core";
 
 import {useStyles} from "./useStyles";
 import WorkExperienceCard from "./WorkExperienceCard";
+import {IPastCompanyDetails, pastCompanies} from "./pastCompanies";
 
 const WorkExperience = () => {
 	const classes = useStyles();
@@ -17,30 +18,16 @@ const WorkExperience = () => {
 				</Typography>
 			</div>
 			<div className={classes.content}>
-				<WorkExperienceCard
-					count={"01"}
-					company="Quorilla"
-					position="Frontend Engineer"
-					description="I have worked at Quorilla as a Frontend Engineer"
-				/>
-				<WorkExperienceCard
-					count={"02"}
-					company="Siterecon"
-					position="Freelance Frontend Developer"
-					description="I have worked at Siterecon as a Frontend Developer"
-				/>
-				<WorkExperienceCard
-					count={"03"}
-					company="Publaunch"
-					position="Freelance Frontend Developer"
-					description="I have worked at Publaunch as a Frontend Developer"
-				/>
-				<WorkExperienceCard
-					count={"04"}
-					company="Tweetflick"
-					position="Indie Maker"
-					description="I have worked at Tweetflick as a Frontend Developer"
-				/>
+				{pastCompanies.map((company: IPastCompanyDetails, index: number) => {
+					return (
+						<WorkExperienceCard
+							positionInSite={`0${index + 1}`}
+							companyDetails={company.basicDetails}
+							position={company.position}
+							description={company.workDescription}
+						/>
+					);
+				})}
 			</div>
 		</main>
 	);

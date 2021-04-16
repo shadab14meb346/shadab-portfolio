@@ -16,10 +16,10 @@ const HeroSection = () => {
 				/>
 			</div>
 			<div className={classes.content}>
-				<Typography variant="h1">I'm Shadab Alam.</Typography>
+				<Typography variant="h1">I’m Shadab Alam.</Typography>
 				<Typography variant="h1">A Full Stack Developer</Typography>
 				<Typography variant="h1" className={classes.customFontColor}>
-					based in India
+					based in India.
 				</Typography>
 				<Typography variant="body1" className={classes.about}>
 					I’m probably the most passionate engineer you will ever get to work

@@ -18,11 +18,11 @@ export const useStyles = makeStyles((theme) => ({
 		justifyContent: "space-between",
 		flexFlow: "wrap",
 	},
-	// workExperienceItemContainer: {
-
-	// }
 	customFontSize: {
 		fontSize: "117px",
 		lineHeight: "140px",
+	},
+	workExperienceCardContainer: {
+		maxWidth: 368,
 	},
 }));

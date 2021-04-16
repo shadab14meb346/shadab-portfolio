@@ -2,31 +2,32 @@ import React from "react";
 import {Box, Typography} from "@material-ui/core";
 
 import {useStyles} from "./useStyles";
+import {ICompanyDetails} from "./pastCompanies";
 
 interface IWorkExperienceCardProps {
-	count: string;
-	company: string;
+	positionInSite: string;
+	companyDetails: ICompanyDetails;
 	position: string;
 	description: string;
 }
 const WorkExperienceCard = ({
-	count,
-	company,
+	positionInSite,
+	companyDetails,
 	position,
 	description,
 }: IWorkExperienceCardProps) => {
 	const classes = useStyles();
 	return (
-		<div>
+		<div className={classes.workExperienceCardContainer}>
 			<Typography
 				variant="body1"
 				color="textSecondary"
 				className={classes.customFontSize}>
-				{count}
+				{positionInSite}
 			</Typography>
 			<Box display="flex">
 				<Typography variant="h3">
-					{company},{position}
+					{companyDetails.name}, {position}
 				</Typography>
 			</Box>
 

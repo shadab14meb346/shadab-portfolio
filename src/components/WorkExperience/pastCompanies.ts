@@ -21,7 +21,7 @@ export const pastCompanies: IPastCompanyDetails[] = [
 			color: "rgb(127,227,162)",
 		},
 		position: "Frontend Engineer",
-		workDescription: "Currently I work as frontend developer at Quorilla",
+		workDescription: "Currently I work as frontend developer at Quorilla.",
 	},
 	{
 		showInSite: true,
@@ -33,7 +33,7 @@ export const pastCompanies: IPastCompanyDetails[] = [
 		},
 		position: "Freelancer Frontend Engineer",
 		workDescription:
-			"Working as a frontend freelancer on different modules of their web app",
+			"Working as a frontend freelancer on different modules of their web app.",
 	},
 	{
 		showInSite: true,
@@ -57,7 +57,7 @@ export const pastCompanies: IPastCompanyDetails[] = [
 		},
 		position: "Freelancer Frontend Engineer",
 		workDescription:
-			"Worked as a freelancer frontend developer and developed a few modules of their web app",
+			"Worked as a freelancer frontend developer and developed a few modules of their web app.",
 	},
 	{
 		showInSite: true,
@@ -69,6 +69,6 @@ export const pastCompanies: IPastCompanyDetails[] = [
 		},
 		position: "Full stack developer",
 		workDescription:
-			"I started my career of Software Engineer from TCS and here I worked as Full stack developer",
+			"I started my career of Software Engineer from TCS and here I worked as Full stack developer.",
 	},
 ];

@@ -4,19 +4,17 @@ import {Typography} from "@material-ui/core";
 import {useStyles} from "./useStyles";
 import WorkExperienceCard from "./WorkExperienceCard";
 import {IPastCompanyDetails, pastCompanies} from "./pastCompanies";
+import SectionHeader from "../Common/SectionHeader";
+import SectionContainer from "../Common/SectionContainer";
 
 const WorkExperience = () => {
 	const classes = useStyles();
 	return (
-		<main className={classes.container}>
-			<div className={classes.title}>
-				<Typography variant="h5" color="textSecondary">
-					WORK EXPERIENCE
-				</Typography>
-				<Typography variant="h2">
-					Companies I have worked for in the past
-				</Typography>
-			</div>
+		<SectionContainer>
+			<SectionHeader
+				title="WORK EXPERIENCE"
+				subtitle="Companies I have worked for in the past"
+			/>
 			<div className={classes.content}>
 				{pastCompanies.map((company: IPastCompanyDetails, index: number) => {
 					return (
@@ -29,7 +27,7 @@ const WorkExperience = () => {
 					);
 				})}
 			</div>
-		</main>
+		</SectionContainer>
 	);
 };
 

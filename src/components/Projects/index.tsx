@@ -24,6 +24,7 @@ const Projects = () => {
 							title={project.title}
 							description={project.description}
 							imageFileName={project.imageFileName}
+							key={project.title}
 						/>
 					);
 				})}

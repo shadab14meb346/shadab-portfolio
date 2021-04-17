@@ -23,6 +23,7 @@ const WorkExperience = () => {
 							companyDetails={company.basicDetails}
 							position={company.position}
 							description={company.workDescription}
+							key={company.basicDetails.name}
 						/>
 					);
 				})}

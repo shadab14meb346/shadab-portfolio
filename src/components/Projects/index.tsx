@@ -4,6 +4,7 @@ import {useStyles} from "./useStyles";
 import SectionContainer from "../Common/SectionContainer";
 import SectionHeader from "../Common/SectionHeader";
 import ProjectCard from "./ProjectCard";
+import {IProject, projects} from "./projects";
 
 const Projects = () => {
 	const classes = useStyles();
@@ -17,22 +18,15 @@ const Projects = () => {
 					/>
 				</Grid>
 
-				<ProjectCard
-					title="Web App Development"
-					description="I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one."
-					imageFileName="quorilla_web_app.png"
-				/>
-				<ProjectCard
-					title="Web App Development"
-					description="I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one."
-					imageFileName="siterecon_web_app.jpg"
-				/>
-
-				<ProjectCard
-					title="Web App & Chrome Extension Development"
-					description="I worked with the guys at CBRE to redesign their entire website and mobile app fro both Android and iOS. This project lasted for 4 months and was a very challenging one."
-					imageFileName="screely-1618617230184.png"
-				/>
+				{projects.map((project: IProject) => {
+					return (
+						<ProjectCard
+							title={project.title}
+							description={project.description}
+							imageFileName={project.imageFileName}
+						/>
+					);
+				})}
 			</Grid>
 		</SectionContainer>
 	);

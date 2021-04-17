@@ -17,8 +17,12 @@ const ProjectCard = ({
 	return (
 		<Grid item sm={6} xs={12}>
 			<Image width={1848} height={949} src={`/${imageFileName}`} />
-			<Typography variant="h3">{title}</Typography>
-			<Typography variant="body1">{description}</Typography>
+			<Typography variant="h3" className={classes.title}>
+				{title}
+			</Typography>
+			<Typography variant="body1" color="textSecondary">
+				{description}
+			</Typography>
 		</Grid>
 	);
 };

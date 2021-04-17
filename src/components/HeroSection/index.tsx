@@ -8,7 +8,7 @@ const HeroSection = () => {
 	const classes = useStyles();
 	return (
 		<div className={classes.container}>
-			<div>
+			<div className={classes.imageContainer}>
 				<Image
 					src="/Shadab-Standing-Qutub-Minar.jpeg"
 					width={610}

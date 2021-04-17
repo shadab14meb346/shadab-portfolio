@@ -2,9 +2,10 @@ import {makeStyles} from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
 	container: {
-		maxWidth: 690,
-	},
-	description: {
-		marginTop: theme.spacing(2.4),
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		maxWidth: 360,
+		maxHeight: 400,
 	},
 }));

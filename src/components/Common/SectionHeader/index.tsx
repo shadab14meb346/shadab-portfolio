@@ -5,9 +5,10 @@ import {useStyles} from "./useStyle";
 interface ISectionHeaderProps {
 	title: string;
 	subtitle: string;
+	description?: string;
 }
 
-const SectionHeader = ({title, subtitle}: ISectionHeaderProps) => {
+const SectionHeader = ({title, subtitle, description}: ISectionHeaderProps) => {
 	const classes = useStyles();
 	return (
 		<div className={classes.container}>
@@ -15,6 +16,12 @@ const SectionHeader = ({title, subtitle}: ISectionHeaderProps) => {
 				{title}
 			</Typography>
 			<Typography variant="h2">{subtitle}</Typography>
+			<Typography
+				variant="h4"
+				color="textSecondary"
+				className={classes.description}>
+				{description}
+			</Typography>
 		</div>
 	);
 };

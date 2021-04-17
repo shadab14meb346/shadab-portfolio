@@ -68,7 +68,7 @@ const theme = createMuiTheme({
 				fontFamily: "Sen-Regular",
 				fontSize: "18px",
 				fontWeight: 700,
-				lineHeight: "17px",
+				lineHeight: "27px",
 			},
 			h5: {
 				fontFamily: "Sen-Regular",

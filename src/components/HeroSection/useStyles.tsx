@@ -28,4 +28,7 @@ export const useStyles = makeStyles((theme) => ({
 			marginTop: theme.spacing(1.5),
 		},
 	},
+	imageContainer: {
+		paddingLeft: theme.spacing(9),
+	},
 }));

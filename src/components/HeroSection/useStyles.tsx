@@ -30,5 +30,8 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	imageContainer: {
 		paddingLeft: theme.spacing(9),
+		[theme.breakpoints.down("sm")]: {
+			paddingLeft: theme.spacing(0),
+		},
 	},
 }));

@@ -4,6 +4,7 @@ import HeroSection from "../src/components/HeroSection";
 import NavBar from "../src/components/NavBar";
 import WorkExperience from "../src/components/WorkExperience";
 import Projects from "../src/components/Projects";
+import Skills from "../src/components/Skills";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 			<HeroSection />
 			<WorkExperience />
 			<Projects />
+			<Skills />
 		</div>
 	);
 }

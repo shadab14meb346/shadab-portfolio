@@ -11,7 +11,9 @@ const Skills = () => {
 			<SectionHeader title="" subtitle="Skillset" />
 			<div className={classes.content}>
 				{mySkills.map((skill: ISkill) => {
-					return <SkillItem name={skill.name} image={skill.image} />;
+					return (
+						<SkillItem key={skill.name} name={skill.name} image={skill.image} />
+					);
 				})}
 			</div>
 		</SectionContainer>

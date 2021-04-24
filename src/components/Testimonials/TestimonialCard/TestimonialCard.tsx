@@ -1,21 +1,25 @@
 import {Link, Typography, Avatar} from "@material-ui/core";
+import {ITestimonial} from "../../../portfolioContents/testimonials";
 import {useStyles} from "./useStyles";
 
-interface ITestimonialCardProps {
-	description?: string;
-}
+interface ITestimonialCardProps extends ITestimonial {}
 
-const TestimonialCard = ({description}: ITestimonialCardProps) => {
+const TestimonialCard = ({givenBy, content}: ITestimonialCardProps) => {
 	const classes = useStyles();
 	return (
 		<div className={classes.container}>
-			<Avatar src="/rishabh-garg.jpeg" />
-			<Typography variant="h3">
-				‘’Robin is one of the best designers I have worked with in my entire
-				life. He is a designer who is very capable of taking up complex projects
-				and delivers impeccable design.’’
+			<Avatar src={`/${givenBy.imageFileName}`} className={classes.large} />
+			<Typography variant="h3" align="left">
+				‘’{content}’’
 			</Typography>
-			<Link href="https://www.linkedin.com/in/rishabhgarg7/">Rishabh Garg</Link>
+			<Link
+				href={givenBy.linkedInProfile}
+				className={classes.customLinkColor}
+				target="_blank">
+				<Typography variant="h4" color="textSecondary">
+					{givenBy.name}
+				</Typography>
+			</Link>
 		</div>
 	);
 };

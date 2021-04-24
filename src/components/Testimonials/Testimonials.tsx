@@ -1,7 +1,10 @@
-import {Grid} from "@material-ui/core";
+import {Box, Grid} from "@material-ui/core";
+import {ITestimonial, testimonials} from "../../portfolioContents/testimonials";
+import Carousel from "../Common/Carousel";
 
-import SectionContainer from "../Common/SectionContainer/SectionContainer";
+import SectionContainer from "../Common/SectionContainer";
 import SectionHeader from "../Common/SectionHeader";
+import TestimonialCard from "./TestimonialCard";
 import {useStyles} from "./useStyles";
 
 const Testimonials = () => {
@@ -17,6 +20,17 @@ const Testimonials = () => {
 					/>
 				</Grid>
 			</Grid>
+
+			<Carousel>
+				{testimonials.map((testimonial: ITestimonial) => {
+					return (
+						<TestimonialCard
+							givenBy={testimonial.givenBy}
+							content={testimonial.content}
+						/>
+					);
+				})}
+			</Carousel>
 		</SectionContainer>
 	);
 };

@@ -1,5 +1,5 @@
 import {useState, Children} from "react";
-import {IconButton, Slide} from "@material-ui/core";
+import {IconButton} from "@material-ui/core";
 
 import Arrow from "../Icons/Arrow";
 import {useStyles} from "./useStyles";

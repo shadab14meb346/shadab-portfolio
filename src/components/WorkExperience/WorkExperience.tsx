@@ -5,7 +5,7 @@ import {useStyles} from "./useStyles";
 import WorkExperienceCard from "./WorkExperienceCard";
 import {IPastCompanyDetails, pastCompanies} from "./pastCompanies";
 import SectionHeader from "../Common/SectionHeader";
-import SectionContainer from "../Common/SectionContainer";
+import SectionContainer from "../Common/SectionContainer/SectionContainer";
 
 const WorkExperience = () => {
 	const classes = useStyles();

@@ -1,4 +1,4 @@
-import SectionContainer from "../Common/SectionContainer";
+import SectionContainer from "../Common/SectionContainer/SectionContainer";
 import SectionHeader from "../Common/SectionHeader";
 import SkillItem from "./SkillItem";
 import {useStyles} from "./useStyles";

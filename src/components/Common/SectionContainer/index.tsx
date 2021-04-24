@@ -6,7 +6,7 @@ interface ISectionContainerProps {
 
 const SectionContainer = ({children}: ISectionContainerProps) => {
 	const classes = useStyles();
-	return <main className={classes.container}>{children}</main>;
+	return <section className={classes.container}>{children}</section>;
 };
 
 export default SectionContainer;

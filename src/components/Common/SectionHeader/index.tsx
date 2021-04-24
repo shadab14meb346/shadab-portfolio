@@ -11,7 +11,7 @@ interface ISectionHeaderProps {
 const SectionHeader = ({title, subtitle, description}: ISectionHeaderProps) => {
 	const classes = useStyles();
 	return (
-		<div className={classes.container}>
+		<header className={classes.container}>
 			<Typography variant="h5" color="textSecondary">
 				{title}
 			</Typography>
@@ -22,7 +22,7 @@ const SectionHeader = ({title, subtitle, description}: ISectionHeaderProps) => {
 				className={classes.description}>
 				{description}
 			</Typography>
-		</div>
+		</header>
 	);
 };
 

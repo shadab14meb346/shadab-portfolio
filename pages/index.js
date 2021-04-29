@@ -47,7 +47,7 @@ export default function Home() {
 			<Projects />
 			<Skills sectionRef={skillsRef} />
 			<Testimonials sectionRef={testimonialsRef} />
-			<Footer />
+			<Footer scrollTo={scrollTo} />
 		</div>
 	);
 }

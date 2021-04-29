@@ -1,24 +1,57 @@
 import {Grid, Typography} from "@material-ui/core";
+import {NavBarItemsType} from "../NavBar/types";
 import FooterNavigationItem from "./FooterNavigationItem";
 import SocialMediaProfiles from "./SocialMediaProfiles/SocialMediaProfiles";
 
 import {useStyles} from "./useStyles";
 
-const Footer = () => {
+interface IFooterProps {
+	scrollTo: (itemName: NavBarItemsType) => void;
+}
+
+const Footer = ({scrollTo}: IFooterProps) => {
 	const classes = useStyles();
+	const handleClick = () => {
+		scrollTo(NavBarItemsType.ABOUT);
+	};
 	return (
 		<footer className={classes.container}>
 			<Grid container>
 				<Grid item sm={6} xs={12}>
-					<Typography variant="h3">Shadab.Alam</Typography>
+					<Typography
+						variant="h3"
+						className={classes.name}
+						onClick={handleClick}>
+						Shadab.Alam
+					</Typography>
 					<SocialMediaProfiles />
 				</Grid>
 
 				<Grid item sm={6} xs={12}>
-					<FooterNavigationItem>Home</FooterNavigationItem>
-					<FooterNavigationItem>Experience</FooterNavigationItem>
-					<FooterNavigationItem>Work</FooterNavigationItem>
-					<FooterNavigationItem>Skills</FooterNavigationItem>
+					<FooterNavigationItem
+						onClick={() => {
+							scrollTo(NavBarItemsType.ABOUT);
+						}}>
+						Home
+					</FooterNavigationItem>
+					<FooterNavigationItem
+						onClick={() => {
+							scrollTo(NavBarItemsType.WORK);
+						}}>
+						Work
+					</FooterNavigationItem>
+					<FooterNavigationItem
+						onClick={() => {
+							scrollTo(NavBarItemsType.SKILLS);
+						}}>
+						Skills
+					</FooterNavigationItem>
+					<FooterNavigationItem
+						onClick={() => {
+							scrollTo(NavBarItemsType.TESTIMONIALS);
+						}}>
+						Testimonials
+					</FooterNavigationItem>
 				</Grid>
 				<Typography
 					variant="body2"

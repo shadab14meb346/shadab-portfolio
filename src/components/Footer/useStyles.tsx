@@ -11,5 +11,10 @@ export const useStyles = makeStyles((theme) => ({
 	footerNavigationItem: {
 		paddingTop: theme.spacing(1.5),
 		paddingBottom: theme.spacing(1.5),
+		cursor: "pointer",
+	},
+	name: {
+		width: "fit-content",
+		cursor: "pointer",
 	},
 }));

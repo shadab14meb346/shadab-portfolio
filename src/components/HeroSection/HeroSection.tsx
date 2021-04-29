@@ -10,9 +10,9 @@ const HeroSection = () => {
 		<div className={classes.container}>
 			<div className={classes.imageContainer}>
 				<Image
-					src="/Shadab-Standing-Qutub-Minar.jpeg"
-					width={610}
-					height={500}
+					src="/shadab-park-standing-removebg.png"
+					width={433}
+					height={577}
 				/>
 			</div>
 			<div className={classes.content}>

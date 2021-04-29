@@ -6,11 +6,6 @@ export const useStyles = makeStyles((theme) => ({
 		background: theme.palette.primary.light,
 		height: "40%",
 	},
-	content: {
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
-	},
 	paperAnchorRight: {
 		top: 72,
 	},

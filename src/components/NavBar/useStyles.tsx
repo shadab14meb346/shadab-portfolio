@@ -18,25 +18,6 @@ export const useStyles = makeStyles((theme) => ({
 			height: 72,
 		},
 	},
-	navBarItemsSection: {
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "space-between",
-		minWidth: "30%",
-		[theme.breakpoints.down("sm")]: {
-			display: "none",
-		},
-	},
-	hiddenUpSM: {
-		[theme.breakpoints.up("sm")]: {
-			display: "none",
-		},
-	},
-	hiddenDownSM: {
-		[theme.breakpoints.down("sm")]: {
-			display: "none",
-		},
-	},
 	cursorPointer: {
 		cursor: "pointer",
 	},

@@ -10,6 +10,10 @@ export const useStyles = makeStyles((theme) => ({
 		},
 		paddingRight: theme.spacing(3),
 		paddingLeft: theme.spacing(3),
+		[theme.breakpoints.down("sm")]: {
+			height: 44,
+			width: "100%",
+		},
 	},
 	activeNavBarItem: {
 		background: theme.palette.primary.main,

@@ -3,13 +3,14 @@ import {Drawer} from "@material-ui/core";
 import Image from "next/image";
 
 import {useStyles} from "./useStyles";
-import FooterNavigationItem from "../Footer/FooterNavigationItem";
 import {NavBarItemsType} from "../NavBar/types";
+import NavbarItems from "../NavBar/NavBarItems";
 
 interface ISidebarProps {
 	scrollTo: (itemName: NavBarItemsType) => void;
+	activeNavBarItem: NavBarItemsType;
 }
-const Sidebar = ({scrollTo}: ISidebarProps) => {
+const Sidebar = ({scrollTo, activeNavBarItem}: ISidebarProps) => {
 	const classes = useStyles();
 	const [sidebarVisible, setSidebarVisible] = useState<boolean>(false);
 
@@ -24,7 +25,7 @@ const Sidebar = ({scrollTo}: ISidebarProps) => {
 				}}
 			/>
 			<Drawer
-				anchor={"right"}
+				anchor="right"
 				open={sidebarVisible}
 				onClose={() => {
 					setSidebarVisible(false);
@@ -34,34 +35,13 @@ const Sidebar = ({scrollTo}: ISidebarProps) => {
 					paperAnchorRight: classes.paperAnchorRight,
 				}}>
 				<div
-					className={classes.content}
 					onClick={() => {
 						setSidebarVisible(false);
 					}}>
-					<FooterNavigationItem
-						onClick={() => {
-							scrollTo(NavBarItemsType.ABOUT);
-						}}>
-						Home
-					</FooterNavigationItem>
-					<FooterNavigationItem
-						onClick={() => {
-							scrollTo(NavBarItemsType.WORK);
-						}}>
-						Work
-					</FooterNavigationItem>
-					<FooterNavigationItem
-						onClick={() => {
-							scrollTo(NavBarItemsType.SKILLS);
-						}}>
-						Skills
-					</FooterNavigationItem>
-					<FooterNavigationItem
-						onClick={() => {
-							scrollTo(NavBarItemsType.TESTIMONIALS);
-						}}>
-						Testimonials
-					</FooterNavigationItem>
+					<NavbarItems
+						scrollTo={scrollTo}
+						activeNavBarItem={activeNavBarItem}
+					/>
 				</div>
 			</Drawer>
 		</>

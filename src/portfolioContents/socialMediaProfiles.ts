@@ -7,4 +7,8 @@ export const socialMediaProfiles = [
 		icon: "linkedIn-icon.svg",
 		link: "https://www.linkedin.com/in/md-shadab-alam/",
 	},
+	{
+		icon: "github-logo.svg",
+		link: "https://github.com/shadab14meb346",
+	},
 ];

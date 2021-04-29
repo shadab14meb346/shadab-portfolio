@@ -1,18 +1,30 @@
-import {useState} from "react";
+import {useState, MutableRefObject} from "react";
 import {Typography} from "@material-ui/core";
 import Image from "next/image";
 
 import NavBarItem from "./NavBarItem/NavBarItem";
 import {useStyles} from "./useStyles";
 import {NavBarItemsType} from "./types";
-const NavBar = () => {
+
+interface INavBarProps {
+	scrollTo: (itemName: NavBarItemsType) => void;
+}
+
+const NavBar = ({scrollTo}: INavBarProps) => {
 	const classes = useStyles();
 	const [activeItem, setActiveItem] = useState<NavBarItemsType>(
-		NavBarItemsType.EXPERIENCE
+		NavBarItemsType.ABOUT
 	);
+	const handleClick = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+		setActiveItem(NavBarItemsType.ABOUT);
+	};
 	return (
 		<nav className={classes.navbar}>
-			<section>
+			<section className={classes.cursorPointer} onClick={handleClick}>
 				<Typography variant="h3">Shadab.Alam</Typography>
 			</section>
 			<div className={classes.hiddenUpSM}>
@@ -20,24 +32,36 @@ const NavBar = () => {
 			</div>
 			<section className={classes.navBarItemsSection}>
 				<NavBarItem
-					title="Experience"
-					isActive={activeItem === NavBarItemsType.EXPERIENCE}
-					onClick={() => setActiveItem(NavBarItemsType.EXPERIENCE)}
+					title={NavBarItemsType.ABOUT}
+					isActive={activeItem === NavBarItemsType.ABOUT}
+					onClick={() => {
+						setActiveItem(NavBarItemsType.ABOUT);
+						scrollTo(NavBarItemsType.ABOUT);
+					}}
 				/>
 				<NavBarItem
-					title="Work"
+					title={NavBarItemsType.WORK}
 					isActive={activeItem === NavBarItemsType.WORK}
-					onClick={() => setActiveItem(NavBarItemsType.WORK)}
+					onClick={() => {
+						setActiveItem(NavBarItemsType.WORK);
+						scrollTo(NavBarItemsType.WORK);
+					}}
 				/>
 				<NavBarItem
-					title="Skills"
+					title={NavBarItemsType.SKILLS}
 					isActive={activeItem === NavBarItemsType.SKILLS}
-					onClick={() => setActiveItem(NavBarItemsType.SKILLS)}
+					onClick={() => {
+						setActiveItem(NavBarItemsType.SKILLS);
+						scrollTo(NavBarItemsType.SKILLS);
+					}}
 				/>
 				<NavBarItem
-					title="Contact"
-					isActive={activeItem === NavBarItemsType.CONTACT}
-					onClick={() => setActiveItem(NavBarItemsType.CONTACT)}
+					title={NavBarItemsType.TESTIMONIALS}
+					isActive={activeItem === NavBarItemsType.TESTIMONIALS}
+					onClick={() => {
+						setActiveItem(NavBarItemsType.TESTIMONIALS);
+						scrollTo(NavBarItemsType.TESTIMONIALS);
+					}}
 				/>
 			</section>
 		</nav>

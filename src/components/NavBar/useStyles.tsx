@@ -37,4 +37,7 @@ export const useStyles = makeStyles((theme) => ({
 			display: "none",
 		},
 	},
+	cursorPointer: {
+		cursor: "pointer",
+	},
 }));

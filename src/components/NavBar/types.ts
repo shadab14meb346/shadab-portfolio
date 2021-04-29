@@ -1,6 +1,6 @@
 export enum NavBarItemsType {
-	EXPERIENCE = "Experience",
+	ABOUT = "About",
 	WORK = "Work",
 	SKILLS = "Skills",
-	CONTACT = "Contact",
+	TESTIMONIALS = "Testimonials",
 }

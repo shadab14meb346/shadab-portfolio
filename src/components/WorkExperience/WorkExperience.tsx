@@ -1,5 +1,4 @@
-import React from "react";
-import {Typography} from "@material-ui/core";
+import React, {MutableRefObject, useRef} from "react";
 
 import {useStyles} from "./useStyles";
 import WorkExperienceCard from "./WorkExperienceCard";
@@ -7,10 +6,15 @@ import {IPastCompanyDetails, pastCompanies} from "./pastCompanies";
 import SectionHeader from "../Common/SectionHeader";
 import SectionContainer from "../Common/SectionContainer/SectionContainer";
 
-const WorkExperience = () => {
+interface IWorkExperienceProps {
+	sectionRef: MutableRefObject<any>;
+}
+
+const WorkExperience = ({sectionRef}: IWorkExperienceProps) => {
 	const classes = useStyles();
+
 	return (
-		<SectionContainer>
+		<SectionContainer sectionRef={sectionRef}>
 			<SectionHeader
 				title="WORK EXPERIENCE"
 				subtitle="Companies I have worked for in the past"

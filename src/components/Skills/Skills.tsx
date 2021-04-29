@@ -1,15 +1,21 @@
+import {MutableRefObject} from "react";
+
 import SectionContainer from "../Common/SectionContainer/SectionContainer";
 import SectionHeader from "../Common/SectionHeader";
 import SkillItem from "./SkillItem";
 import {useStyles} from "./useStyles";
 import {ISkill, mySkills} from "./skills";
 
-const Skills = () => {
+interface ISkillsProps {
+	sectionRef: MutableRefObject<any>;
+}
+
+const Skills = ({sectionRef}: ISkillsProps) => {
 	const classes = useStyles();
 	return (
-		<SectionContainer>
+		<SectionContainer sectionRef={sectionRef}>
 			<SectionHeader title="" subtitle="Skillset" />
-			<div className={classes.content}>
+			<div className={classes.content} ref={sectionRef}>
 				{mySkills.map((skill: ISkill) => {
 					return (
 						<SkillItem key={skill.name} name={skill.name} image={skill.image} />

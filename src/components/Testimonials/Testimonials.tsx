@@ -1,4 +1,5 @@
 import {Box, Grid} from "@material-ui/core";
+import {MutableRefObject} from "react";
 import {ITestimonial, testimonials} from "../../portfolioContents/testimonials";
 import Carousel from "../Common/Carousel";
 
@@ -7,10 +8,14 @@ import SectionHeader from "../Common/SectionHeader";
 import TestimonialCard from "./TestimonialCard";
 import {useStyles} from "./useStyles";
 
-const Testimonials = () => {
+interface ITestimonialsProps {
+	sectionRef: MutableRefObject<any>;
+}
+
+const Testimonials = ({sectionRef}: ITestimonialsProps) => {
 	const classes = useStyles();
 	return (
-		<SectionContainer>
+		<SectionContainer sectionRef={sectionRef}>
 			<Grid container spacing={2}>
 				<Grid xs={12} sm={6} item>
 					<SectionHeader

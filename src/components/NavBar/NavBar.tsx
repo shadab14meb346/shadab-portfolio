@@ -5,6 +5,7 @@ import Image from "next/image";
 import NavBarItem from "./NavBarItem/NavBarItem";
 import {useStyles} from "./useStyles";
 import {NavBarItemsType} from "./types";
+import Sidebar from "../Sidebar";
 
 interface INavBarProps {
 	scrollTo: (itemName: NavBarItemsType) => void;
@@ -34,7 +35,7 @@ const NavBar = ({scrollTo, activeNavBarItem}: INavBarProps) => {
 				<Typography variant="h3">Shadab.Alam</Typography>
 			</section>
 			<div className={classes.hiddenUpSM}>
-				<Image width={24} height={24} src="/menu_burger_icon.svg" />
+				<Sidebar scrollTo={scrollTo} />
 			</div>
 			<section className={classes.navBarItemsSection}>
 				<NavBarItem

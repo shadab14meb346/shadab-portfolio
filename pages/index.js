@@ -1,5 +1,6 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import Head from "next/head";
+import {InView} from "react-intersection-observer";
 
 import HeroSection from "../src/components/HeroSection";
 import NavBar from "../src/components/NavBar";
@@ -14,6 +15,9 @@ export default function Home() {
 	const testimonialsRef = useRef(null);
 	const workExperienceRef = useRef(null);
 	const skillsRef = useRef(null);
+	const [activeNavBarItem, setActiveNavBarItem] = useState(
+		NavBarItemsType.ABOUT
+	);
 
 	const scrollTo = (itemName) => {
 		switch (itemName) {
@@ -35,18 +39,44 @@ export default function Home() {
 		}
 	};
 
+	const handleSectionInView = (inView, section) => {
+		if (inView) {
+			setActiveNavBarItem(section);
+		}
+	};
+
 	return (
 		<div>
 			<Head>
 				<title>Md Shadab Alam</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<NavBar scrollTo={scrollTo} />
-			<HeroSection />
-			<WorkExperience sectionRef={workExperienceRef} />
+			<NavBar scrollTo={scrollTo} activeNavBarItem={activeNavBarItem} />
+			<InView
+				onChange={(inView) => {
+					handleSectionInView(inView, NavBarItemsType.ABOUT);
+				}}>
+				<HeroSection />
+			</InView>
+			<InView
+				onChange={(inView) => {
+					handleSectionInView(inView, NavBarItemsType.WORK);
+				}}>
+				<WorkExperience sectionRef={workExperienceRef} />
+			</InView>
 			<Projects />
-			<Skills sectionRef={skillsRef} />
-			<Testimonials sectionRef={testimonialsRef} />
+			<InView
+				onChange={(inView) => {
+					handleSectionInView(inView, NavBarItemsType.SKILLS);
+				}}>
+				<Skills sectionRef={skillsRef} />
+			</InView>
+			<InView
+				onChange={(inView) => {
+					handleSectionInView(inView, NavBarItemsType.TESTIMONIALS);
+				}}>
+				<Testimonials sectionRef={testimonialsRef} />
+			</InView>
 			<Footer scrollTo={scrollTo} />
 		</div>
 	);

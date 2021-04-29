@@ -1,4 +1,4 @@
-import {useState, MutableRefObject} from "react";
+import {useState, useEffect} from "react";
 import {Typography} from "@material-ui/core";
 import Image from "next/image";
 
@@ -8,13 +8,19 @@ import {NavBarItemsType} from "./types";
 
 interface INavBarProps {
 	scrollTo: (itemName: NavBarItemsType) => void;
+	activeNavBarItem: NavBarItemsType;
 }
 
-const NavBar = ({scrollTo}: INavBarProps) => {
+const NavBar = ({scrollTo, activeNavBarItem}: INavBarProps) => {
 	const classes = useStyles();
 	const [activeItem, setActiveItem] = useState<NavBarItemsType>(
 		NavBarItemsType.ABOUT
 	);
+
+	useEffect(() => {
+		setActiveItem(activeNavBarItem);
+	}, [activeNavBarItem]);
+
 	const handleClick = () => {
 		window.scrollTo({
 			top: 0,

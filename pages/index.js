@@ -45,11 +45,34 @@ export default function Home() {
 		}
 	};
 
+	const seoContent = {
+		title: "Md Shadab Alam | MERN Stack Developer",
+		imageURL:
+			"https://i.ibb.co/K2NJ6kC/screenshot-localhost-3000-2021-05-25-20-10-58.png",
+		description:
+			"I’m probably the most passionate engineer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.",
+		domain: "mohdshadab.com",
+		websiteURL: "https://www.mohdshadab.com/",
+	};
+
 	return (
 		<div>
 			<Head>
-				<title>Md Shadab Alam</title>
+				<title>{seoContent.title}</title>
 				<link rel="icon" href="/favicon.ico" />
+				<meta name="description" content={seoContent.description} />
+				<meta property="og:url" content={seoContent.websiteLink} />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content={seoContent.title} />
+				<meta property="og:description" content={seoContent.description} />
+				<meta property="og:image" content={seoContent.imageURL} />
+
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content={seoContent.domain} />
+				<meta property="twitter:url" content={seoContent.websiteURL} />
+				<meta name="twitter:title" content={seoContent.title} />
+				<meta name="twitter:description" content={seoContent.description} />
+				<meta name="twitter:image" content={seoContent.imageURL} />
 			</Head>
 			<NavBar scrollTo={scrollTo} activeNavBarItem={activeNavBarItem} />
 			<InView

@@ -7,6 +7,16 @@ export interface ITestimonial {
 	content: string;
 }
 export const testimonials: ITestimonial[] = [
+		{
+		givenBy: {
+			name: "Miguel Prieto",
+			linkedInProfile: "https://www.linkedin.com/in/jmigueprieto/",
+			imageFileName: "jmigueprieto.jpeg",
+		},
+		content: `Shadab is an amazing software engineer! Not only he is a great problem-solver and a skillful software developer; he is also a very dedicated, motivated and positive one.
+
+He is a doer, he is adaptable and he is constantly looking for ways to improve things. He is a team player. He produces quality code at a great speed and with a smile. It's just a pleasure to work with someone that has the skills and enthusiasm that Shadab has.`,
+	},
 	{
 		givenBy: {
 			name: "Rishabh Garg",

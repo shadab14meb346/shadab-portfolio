@@ -9,12 +9,14 @@ import Projects from "../src/components/Projects";
 import Skills from "../src/components/Skills";
 import Testimonials from "../src/components/Testimonials";
 import Footer from "../src/components/Footer";
+import Stories from "../src/components/Stories";
 import {NavBarItemsType} from "../src/components/NavBar/types";
 
 export default function Home() {
 	const testimonialsRef = useRef(null);
 	const workExperienceRef = useRef(null);
 	const skillsRef = useRef(null);
+	const storiesRef = useRef(null);
 	const [activeNavBarItem, setActiveNavBarItem] = useState(
 		NavBarItemsType.ABOUT
 	);
@@ -35,6 +37,9 @@ export default function Home() {
 				break;
 			case NavBarItemsType.TESTIMONIALS:
 				testimonialsRef.current.scrollIntoView({behavior: "smooth"});
+				break;
+			case NavBarItemsType.STORIES:
+				storiesRef.current.scrollIntoView({behavior: "smooth"});
 				break;
 		}
 	};
@@ -99,6 +104,13 @@ export default function Home() {
 					handleSectionInView(inView, NavBarItemsType.TESTIMONIALS);
 				}}>
 				<Testimonials sectionRef={testimonialsRef} />
+			</InView>
+
+			<InView
+				onChange={(inView) => {
+					handleSectionInView(inView, NavBarItemsType.STORIES);
+				}}>
+				<Stories sectionRef={storiesRef} />
 			</InView>
 			<Footer scrollTo={scrollTo} />
 		</div>

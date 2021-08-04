@@ -7,5 +7,6 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	socialMediaItemMain: {
 		marginRight: theme.spacing(2),
+		textDecoration: "none",
 	},
 }));

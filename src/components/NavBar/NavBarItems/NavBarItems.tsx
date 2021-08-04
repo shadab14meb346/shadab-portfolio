@@ -21,6 +21,7 @@ const NavbarItems = ({activeNavBarItem, scrollTo}: INavbarItemsProps) => {
 	}, [activeNavBarItem]);
 	return (
 		<section className={classNames(classes.navBarItemsSection)}>
+			{/* {Object.entries(NavBarItemsType).map()} */}
 			<NavBarItem
 				title={NavBarItemsType.ABOUT}
 				isActive={activeItem === NavBarItemsType.ABOUT}
@@ -51,6 +52,14 @@ const NavbarItems = ({activeNavBarItem, scrollTo}: INavbarItemsProps) => {
 				onClick={() => {
 					setActiveItem(NavBarItemsType.TESTIMONIALS);
 					scrollTo(NavBarItemsType.TESTIMONIALS);
+				}}
+			/>
+			<NavBarItem
+				title={NavBarItemsType.STORIES}
+				isActive={activeItem === NavBarItemsType.STORIES}
+				onClick={() => {
+					setActiveItem(NavBarItemsType.STORIES);
+					scrollTo(NavBarItemsType.STORIES);
 				}}
 			/>
 		</section>

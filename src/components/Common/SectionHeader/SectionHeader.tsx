@@ -1,17 +1,28 @@
-import {Typography} from "@material-ui/core";
+import {BoxProps, Box, Typography} from "@material-ui/core";
+import classNames from "classnames";
 
 import {useStyles} from "./useStyle";
 
-interface ISectionHeaderProps {
-	title: string;
+interface ISectionHeaderProps extends BoxProps {
+	title?: string;
 	subtitle: string;
 	description?: string;
+	className?: string;
 }
 
-const SectionHeader = ({title, subtitle, description}: ISectionHeaderProps) => {
+const SectionHeader = ({
+	title = "",
+	subtitle,
+	description,
+	className,
+	...rest
+}: ISectionHeaderProps) => {
 	const classes = useStyles();
 	return (
-		<header className={classes.container}>
+		<Box
+			component="header"
+			{...rest}
+			className={classNames(classes.container, className)}>
 			<Typography variant="h5" color="textSecondary">
 				{title}
 			</Typography>
@@ -22,7 +33,7 @@ const SectionHeader = ({title, subtitle, description}: ISectionHeaderProps) => {
 				className={classes.description}>
 				{description}
 			</Typography>
-		</header>
+		</Box>
 	);
 };
 

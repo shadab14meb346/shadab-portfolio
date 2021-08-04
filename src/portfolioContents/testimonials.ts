@@ -7,7 +7,7 @@ export interface ITestimonial {
 	content: string;
 }
 export const testimonials: ITestimonial[] = [
-		{
+	{
 		givenBy: {
 			name: "Miguel Prieto",
 			linkedInProfile: "https://www.linkedin.com/in/jmigueprieto/",
@@ -28,6 +28,14 @@ He is a doer, he is adaptable and he is constantly looking for ways to improve t
 				build new features and requests in record time. He's a fast learner and
 				able to pick up new things pretty fast which is too much important in a
         startup kind of ecosystem.`,
+	},
+	{
+		givenBy: {
+			name: "Tabrez Khan",
+			linkedInProfile: "https://www.linkedin.com/in/iamtabrezkhan/",
+			imageFileName: "tabrez_khan.jpeg",
+		},
+		content: `Shadab and I met at Pesto, where we were both enrolled in the same batch. We had worked together on previous projects before joining as well. He is an excellent programmer with skills across JavaScript frameworks like ReactJS and NodeJS; he also proved his leadership abilities by taking ownership of tasks while mentoring other devs when they needed help. Not only does Shadab have a knack for programming clean code that is easy to maintain, but he's one heck of a cool guy too!`,
 	},
 	{
 		givenBy: {

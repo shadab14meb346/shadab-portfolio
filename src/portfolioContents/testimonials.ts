@@ -43,8 +43,7 @@ He is a doer, he is adaptable and he is constantly looking for ways to improve t
 			linkedInProfile: "https://www.linkedin.com/in/sravani-akuthota/",
 			imageFileName: "sravani-akuthota.jpeg",
 		},
-		content: `Shadab and I were part of the same group but didn't work together directly on a project, though sometimes we had some discussions. He is a great JavaScript Developer and very specific to the point for technology.
-We use to have lunch and breaks together in the team. He is an optimistic, humorous, and active personality and engages everyone.`,
+		content: `Shadab is great frontend developer and so much passionate on what he is doing. We were part of the same group but didn't work together, but we still kept in touch after leaving the company and have some amazing discussions on different subjects. He is so much interested in helping dev community and also mentored in bootstrapping my web developing journey. All in all he is an amazing friend and a cheerful guy.`,
 	},
 	{
 		givenBy: {

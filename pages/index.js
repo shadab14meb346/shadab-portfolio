@@ -11,6 +11,7 @@ import Testimonials from "../src/components/Testimonials";
 import Footer from "../src/components/Footer";
 import Stories from "../src/components/Stories";
 import {NavBarItemsType} from "../src/components/NavBar/types";
+import {heroSection} from "../src/portfolioContents/heroSection";
 
 export default function Home() {
 	const testimonialsRef = useRef(null);
@@ -54,8 +55,7 @@ export default function Home() {
 		title: "Md Shadab Alam | MERN Stack Developer",
 		imageURL:
 			"https://i.ibb.co/K2NJ6kC/screenshot-localhost-3000-2021-05-25-20-10-58.png",
-		description:
-			"I’m probably the most passionate engineer you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.",
+		description: heroSection.description,
 		domain: "mohdshadab.com",
 		websiteURL: "https://www.mohdshadab.com/",
 	};

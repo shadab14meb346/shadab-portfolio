@@ -22,7 +22,7 @@ const NavBar = ({scrollTo, activeNavBarItem}: INavBarProps) => {
 	return (
 		<nav className={classes.navbar}>
 			<section className={classes.cursorPointer} onClick={handleClick}>
-				<Typography variant="h3">Shadab.Alam</Typography>
+				<Typography variant="h3">Md Shadab Alam</Typography>
 			</section>
 			<Hidden smUp>
 				<Sidebar scrollTo={scrollTo} activeNavBarItem={activeNavBarItem} />

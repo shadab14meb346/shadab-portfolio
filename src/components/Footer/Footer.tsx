@@ -22,7 +22,7 @@ const Footer = ({scrollTo}: IFooterProps) => {
 						variant="h3"
 						className={classes.name}
 						onClick={handleClick}>
-						Shadab.Alam
+						Md Shadab Alam
 					</Typography>
 					<SocialMediaProfiles />
 				</Grid>

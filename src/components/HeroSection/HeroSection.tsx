@@ -3,6 +3,7 @@ import Image from "next/image";
 import {Typography} from "@material-ui/core";
 
 import {useStyles} from "./useStyles";
+import {heroSection} from "../../portfolioContents/heroSection";
 
 const HeroSection = () => {
 	const classes = useStyles();
@@ -12,15 +13,13 @@ const HeroSection = () => {
 				<Image src="/shadab-park-standing.jpeg" width={433} height={577} />
 			</div>
 			<div className={classes.content}>
-				<Typography variant="h1">I’m Shadab Alam.</Typography>
+				<Typography variant="h1">I’m Md Shadab Alam.</Typography>
 				<Typography variant="h1">A Full Stack Developer</Typography>
 				<Typography variant="h1" className={classes.customFontColor}>
 					based in India.
 				</Typography>
 				<Typography variant="body1" className={classes.about}>
-					I’m probably the most passionate engineer you will ever get to work
-					with. If you have a great project that needs some amazing skills, I’m
-					your guy.
+					{heroSection.description}
 				</Typography>
 			</div>
 		</div>

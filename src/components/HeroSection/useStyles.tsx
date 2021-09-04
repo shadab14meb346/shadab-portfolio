@@ -24,8 +24,10 @@ export const useStyles = makeStyles((theme) => ({
 		color: "rgb(117,117,121)",
 	},
 	about: {
+		maxWidth: "80%",
 		[theme.breakpoints.down("sm")]: {
 			marginTop: theme.spacing(1.5),
+			maxWidth: "100%",
 		},
 	},
 	imageContainer: {

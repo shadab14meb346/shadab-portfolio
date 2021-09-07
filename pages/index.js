@@ -78,6 +78,7 @@ export default function Home() {
 				<meta name="twitter:title" content={seoContent.title} />
 				<meta name="twitter:description" content={seoContent.description} />
 				<meta name="twitter:image" content={seoContent.imageURL} />
+				<meta name="google-site-verification" content="K_41ZKqHv564ii78LADX1pwJLVUfL0ozNPKRxu5YHUg" />
 			</Head>
 			<NavBar scrollTo={scrollTo} activeNavBarItem={activeNavBarItem} />
 			<InView

@@ -33,7 +33,7 @@ export const pastCompanies: IPastCompanyDetails[] = [
 		},
 		position: "Freelancer Frontend Engineer",
 		workDescription:
-			"Working as a frontend freelancer on different modules of their web app.",
+			"Worked as a freelancer frontend developer on different modules of their web app.",
 	},
 	{
 		showInSite: true,
@@ -70,5 +70,17 @@ export const pastCompanies: IPastCompanyDetails[] = [
 		position: "Full stack developer",
 		workDescription:
 			"I started my career of Software Engineer from TCS and here I worked as Full stack developer.",
+	},
+		{
+		showInSite: true,
+		positionInSite: 6,
+		basicDetails: {
+			name: "Geekflare  Assist",
+			website: "https://geekflare.com/assist/",
+			color: "#ff4e00",
+		},
+		position: "Full stack developer",
+		workDescription:
+			"GeekFlare Assist is a chat bot powered by GPT-3 using Open AI APIs designed to answer questions specifically about Unix, SQL & DevOps. Wrote APIs using GraphQL with Nodejs & developed frontend using NextJs",
 	},
 ];

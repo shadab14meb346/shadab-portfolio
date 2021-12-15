@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Footer from "../../src/components/Footer";
 
 export default function TranslateGoogleSheets() {
 	const seoContent = {
@@ -17,7 +16,7 @@ export default function TranslateGoogleSheets() {
 		<div>
 			<Head>
 				<title>{seoContent.title}</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/tgs-favicon.ico" />
 				<meta name="description" content={seoContent.description} />
 				<meta property="og:url" content={seoContent.websiteLink} />
 				<meta property="og:type" content="website" />

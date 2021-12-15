@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Footer from "../../src/components/Footer";
 
 export default function TranslateGoogleSheetsTermsOfServices() {
 	const seoContent = {
@@ -18,7 +17,7 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 		<div>
 			<Head>
 				<title>{seoContent.title}</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/tgs-favicon.ico" />
 				<meta name="description" content={seoContent.description} />
 				<meta property="og:url" content={seoContent.websiteLink} />
 				<meta property="og:type" content="website" />
@@ -66,8 +65,8 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 
 				<h1>Screenshot(s)</h1>
 				<Image
-					src="/screely-1639061984266.png"
-					alt="screenshot of Translate Google Sheets app on Chrome Web Store"
+					src="/screely-1639572723280.png"
+					alt="screenshot of Translate Google Sheets App"
 					width={1000}
 					height={600}
 				/>
@@ -77,15 +76,15 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 					Step 1: After successfully installed the add-on, the add icon will
 					appear in the side bar menu.{" "}
 				</p>
-				<Image src="/screely-1639062045877.png" width={1000} height={600} />
+				<Image src="/screely-1639572909567.png" width={1000} height={600} />
 
 				<p>
 					Step 2: Now, just click on the icon and it will open the a right panel
 					of the Translate Google Sheet as below.
 				</p>
 				<Image
-					src="/screely-1639061984266.png"
-					alt="screenshot of Translate Google Sheets app on Chrome Web Store"
+					src="/screely-1639572723280.png"
+					alt="screenshot of Translate Google Sheets"
 					width={1000}
 					height={600}
 				/>
@@ -96,7 +95,7 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 					it to translate.
 				</p>
 				<img
-					src="/demo-translation-google-sheet.gif"
+					src="/demo translation sheet - Google Sheets (1).gif"
 					alt="how to add on"
 					width={1000}
 					height={600}

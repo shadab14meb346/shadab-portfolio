@@ -4,7 +4,7 @@ import {useStyles} from "./useStyles";
 import SectionContainer from "../Common/SectionContainer";
 import SectionHeader from "../Common/SectionHeader";
 import ProjectCard from "./ProjectCard";
-import {IProject, projects} from "./projects";
+import {IProject, projects} from "./projectsContent";
 
 const Projects = () => {
 	const classes = useStyles();
@@ -14,7 +14,7 @@ const Projects = () => {
 				<Grid item xs={12}>
 					<SectionHeader
 						title="MY PROJECTS"
-						subtitle="Work that I’ve done for the past 3 years"
+						subtitle="Work that I’ve done for the past 4 years"
 					/>
 				</Grid>
 

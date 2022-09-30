@@ -3,8 +3,8 @@ import {MutableRefObject} from "react";
 import SectionContainer from "../Common/SectionContainer/SectionContainer";
 import SectionHeader from "../Common/SectionHeader";
 import SkillItem from "./SkillItem";
+import {ISkill, mySkills} from "./skillsContent";
 import {useStyles} from "./useStyles";
-import {ISkill, mySkills} from "./skills";
 
 interface ISkillsProps {
 	sectionRef: MutableRefObject<any>;

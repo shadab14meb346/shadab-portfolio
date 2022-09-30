@@ -3,7 +3,7 @@ import {MutableRefObject} from "react";
 
 import SectionContainer from "../Common/SectionContainer/SectionContainer";
 import SectionHeader from "../Common/SectionHeader";
-import {stories, IStory} from "./stories";
+import {IStory, stories} from "./storiesContent";
 import StoryCard from "./StoryCard";
 
 interface IStoriesProps {

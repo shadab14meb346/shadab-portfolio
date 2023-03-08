@@ -10,6 +10,7 @@ import Skills from "../src/components/Skills";
 import Testimonials from "../src/components/Testimonials";
 import Footer from "../src/components/Footer";
 import Stories from "../src/components/Stories";
+import SideProjects from "../src/components/SideProjects";
 import {NavBarItemsType} from "../src/components/NavBar/types";
 import {heroSection} from "../src/portfolioContents/heroSection";
 
@@ -18,6 +19,7 @@ export default function Home() {
 	const workExperienceRef = useRef(null);
 	const skillsRef = useRef(null);
 	const storiesRef = useRef(null);
+	const sideProjectsRef = useRef(null);
 	const [activeNavBarItem, setActiveNavBarItem] = useState(
 		NavBarItemsType.ABOUT
 	);
@@ -32,6 +34,9 @@ export default function Home() {
 				break;
 			case NavBarItemsType.WORK:
 				workExperienceRef.current.scrollIntoView({behavior: "smooth"});
+				break;
+			case NavBarItemsType.SIDE_PROJECTS:
+				sideProjectsRef.current.scrollIntoView({behavior: "smooth"});
 				break;
 			case NavBarItemsType.SKILLS:
 				skillsRef.current.scrollIntoView({behavior: "smooth"});
@@ -78,7 +83,10 @@ export default function Home() {
 				<meta name="twitter:title" content={seoContent.title} />
 				<meta name="twitter:description" content={seoContent.description} />
 				<meta name="twitter:image" content={seoContent.imageURL} />
-				<meta name="google-site-verification" content="K_41ZKqHv564ii78LADX1pwJLVUfL0ozNPKRxu5YHUg" />
+				<meta
+					name="google-site-verification"
+					content="K_41ZKqHv564ii78LADX1pwJLVUfL0ozNPKRxu5YHUg"
+				/>
 			</Head>
 			<NavBar scrollTo={scrollTo} activeNavBarItem={activeNavBarItem} />
 			<InView
@@ -93,7 +101,12 @@ export default function Home() {
 				}}>
 				<WorkExperience sectionRef={workExperienceRef} />
 			</InView>
-			<Projects />
+			<InView
+				onChange={(inView) => {
+					handleSectionInView(inView, NavBarItemsType.SIDE_PROJECTS);
+				}}>
+				<SideProjects sectionRef={sideProjectsRef} />
+			</InView>
 			<InView
 				onChange={(inView) => {
 					handleSectionInView(inView, NavBarItemsType.SKILLS);

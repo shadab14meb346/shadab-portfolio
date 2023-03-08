@@ -17,7 +17,7 @@ export const pastCompanies: IPastCompanyDetails[] = [
 		positionInSite: 1,
 		basicDetails: {
 			name: "The Cumin Club",
-			website: "thecuminclub.com",
+			website: "https://www.thecuminclub.com/",
 			color: "rgb(212, 106, 25)",
 		},
 		position: "Backend Developer, Freelancer",

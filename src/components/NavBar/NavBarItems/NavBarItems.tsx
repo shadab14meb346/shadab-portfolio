@@ -39,6 +39,14 @@ const NavbarItems = ({activeNavBarItem, scrollTo}: INavbarItemsProps) => {
 				}}
 			/>
 			<NavBarItem
+				title={NavBarItemsType.SIDE_PROJECTS}
+				isActive={activeItem === NavBarItemsType.SIDE_PROJECTS}
+				onClick={() => {
+					setActiveItem(NavBarItemsType.SIDE_PROJECTS);
+					scrollTo(NavBarItemsType.SIDE_PROJECTS);
+				}}
+			/>
+			<NavBarItem
 				title={NavBarItemsType.SKILLS}
 				isActive={activeItem === NavBarItemsType.SKILLS}
 				onClick={() => {

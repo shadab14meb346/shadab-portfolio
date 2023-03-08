@@ -11,4 +11,8 @@ export const socialMediaProfiles = [
 		icon: "github-logo.svg",
 		link: "https://github.com/shadab14meb346",
 	},
+	{
+		icon: "EmailIcon.svg",
+		link: "mailto:shadab14meb346@gmail.com",
+	},
 ];

@@ -1,4 +1,5 @@
 import {Grid, Typography} from "@material-ui/core";
+import {MutableRefObject} from "react";
 import {NavBarItemsType} from "../NavBar/types";
 import FooterNavigationItem from "./FooterNavigationItem";
 import SocialMediaProfiles from "./SocialMediaProfiles/SocialMediaProfiles";
@@ -7,15 +8,16 @@ import {useStyles} from "./useStyles";
 
 interface IFooterProps {
 	scrollTo: (itemName: NavBarItemsType) => void;
+	sectionRef: MutableRefObject<any>;
 }
 
-const Footer = ({scrollTo}: IFooterProps) => {
+const Footer = ({scrollTo, sectionRef}: IFooterProps) => {
 	const classes = useStyles();
 	const handleClick = () => {
 		scrollTo(NavBarItemsType.ABOUT);
 	};
 	return (
-		<footer className={classes.container}>
+		<footer className={classes.container} ref={sectionRef}>
 			<Grid container>
 				<Grid item sm={6} xs={12}>
 					<Typography

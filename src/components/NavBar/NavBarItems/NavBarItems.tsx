@@ -70,6 +70,14 @@ const NavbarItems = ({activeNavBarItem, scrollTo}: INavbarItemsProps) => {
 					scrollTo(NavBarItemsType.STORIES);
 				}}
 			/>
+			<NavBarItem
+				title={NavBarItemsType.CONTACTS}
+				isActive={activeItem === NavBarItemsType.FOOTER}
+				onClick={() => {
+					setActiveItem(NavBarItemsType.FOOTER);
+					scrollTo(NavBarItemsType.FOOTER);
+				}}
+			/>
 		</section>
 	);
 };

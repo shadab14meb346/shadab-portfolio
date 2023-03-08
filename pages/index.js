@@ -20,6 +20,7 @@ export default function Home() {
 	const skillsRef = useRef(null);
 	const storiesRef = useRef(null);
 	const sideProjectsRef = useRef(null);
+	const footerRef = useRef(null);
 	const [activeNavBarItem, setActiveNavBarItem] = useState(
 		NavBarItemsType.ABOUT
 	);
@@ -43,6 +44,9 @@ export default function Home() {
 				break;
 			case NavBarItemsType.TESTIMONIALS:
 				testimonialsRef.current.scrollIntoView({behavior: "smooth"});
+				break;
+			case NavBarItemsType.FOOTER:
+				footerRef.current.scrollIntoView({behavior: "smooth"});
 				break;
 			case NavBarItemsType.STORIES:
 				storiesRef.current.scrollIntoView({behavior: "smooth"});
@@ -126,7 +130,12 @@ export default function Home() {
 				}}>
 				<Stories sectionRef={storiesRef} />
 			</InView>
-			<Footer scrollTo={scrollTo} />
+			<InView
+				onChange={(inView) => {
+					handleSectionInView(inView, NavBarItemsType.FOOTER);
+				}}>
+				<Footer scrollTo={scrollTo} sectionRef={footerRef} />
+			</InView>
 		</div>
 	);
 }

@@ -10,7 +10,7 @@ const HeroSection = () => {
 	return (
 		<div className={classes.container}>
 			<div className={classes.imageContainer}>
-				<Image src="/shadab-park-standing.jpeg" width={433} height={577} />
+				<Image src="/IMG_0087.jpeg" width={433} height={577} />
 			</div>
 			<div className={classes.content}>
 				<Typography variant="h1">I’m Md Shadab Alam.</Typography>

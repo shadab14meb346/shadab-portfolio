@@ -14,6 +14,7 @@ export const useStyles = makeStyles((theme) => ({
 		},
 	},
 	content: {
+		maxWidth: "1024px",
 		padding: theme.spacing(5),
 		[theme.breakpoints.down("sm")]: {
 			paddingLeft: theme.spacing(2),

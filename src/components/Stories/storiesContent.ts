@@ -19,4 +19,11 @@ export const stories: IStory[] = [
 		imageFileName: "startup_article_cover_img.jpeg",
 		link: "https://shadabshs.medium.com/lessons-learned-from-my-first-failed-venture-3758b6f8d389",
 	},
+	{
+		title: "My Experiences At Antler India Residency Programm",
+		description:
+			"An article about my experiences at Antler India Residency Programm",
+		imageFileName: "anter-india-residency.jpeg",
+		link: "https://md-shadab-alam.notion.site/my-experience-at-Antler-India-Residency-Programm-84b9cc042e904a2787e93553cce7adac?pvs=4",
+	},
 ];

@@ -14,7 +14,7 @@ const HeroSection = () => {
 				<Image src="/IMG_0087.jpeg" width={433} height={577} />
 			</div>
 			<div className={classes.content}>
-				<Typography variant="h1">I’m Md Shadab Alam.</Typography>
+				<Typography variant="h1">I’m Shadab.</Typography>
 				<Typography variant="h1">A Full Stack Developer</Typography>
 				<Typography variant="h1" className={classes.customFontColor}>
 					based in India.

@@ -16,7 +16,12 @@ const ProjectCard = ({
 	const classes = useStyles();
 	return (
 		<Grid item sm={6} xs={12}>
-			<Image width={1848} height={949} src={`/${imageFileName}`} />
+			<Image
+				width={1848}
+				height={949}
+				src={`/${imageFileName}`}
+				alt={imageFileName}
+			/>
 			<Typography variant="h3" className={classes.title}>
 				{title}
 			</Typography>

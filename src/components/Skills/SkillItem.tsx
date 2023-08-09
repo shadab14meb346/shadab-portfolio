@@ -11,7 +11,7 @@ const SkillItem = ({name, image}: ISkillItemProps) => {
 	const classes = useStyles();
 	return (
 		<div className={classes.skillItemContainer}>
-			<Image width={96} height={96} src={`/${image}`} />
+			<Image width={96} height={96} src={`/${image}`} alt="image" />
 			<Typography variant="h3">{name}</Typography>
 		</div>
 	);

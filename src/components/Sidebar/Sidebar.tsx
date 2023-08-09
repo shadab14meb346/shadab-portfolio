@@ -23,6 +23,7 @@ const Sidebar = ({scrollTo, activeNavBarItem}: ISidebarProps) => {
 				onClick={() => {
 					setSidebarVisible(true);
 				}}
+				alt="burger-icon"
 			/>
 			<Drawer
 				anchor="right"

@@ -69,6 +69,7 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 					alt="screenshot of Translate Google Sheets App"
 					width={1000}
 					height={600}
+					alt="screenshot of Translate Google Sheets App"
 				/>
 
 				<h1>How it works?</h1>
@@ -76,7 +77,12 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 					Step 1: After successfully installed the add-on, the add icon will
 					appear in the side bar menu.{" "}
 				</p>
-				<Image src="/screely-1639572909567.png" width={1000} height={600} />
+				<Image
+					src="/screely-1639572909567.png"
+					width={1000}
+					height={600}
+					alt="screenshot of Translate Google Sheets App"
+				/>
 
 				<p>
 					Step 2: Now, just click on the icon and it will open the a right panel

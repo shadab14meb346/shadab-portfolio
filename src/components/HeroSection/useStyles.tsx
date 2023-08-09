@@ -37,4 +37,27 @@ export const useStyles = makeStyles((theme) => ({
 			paddingLeft: theme.spacing(0),
 		},
 	},
+	ctaContainer: {
+		marginTop: theme.spacing(4),
+		display: "flex",
+		[theme.breakpoints.down("sm")]: {
+			marginTop: theme.spacing(2),
+		},
+	},
+	ctaBtn: {
+		marginLeft: theme.spacing(8),
+	},
+	customContainedBtn: {
+		background: theme.palette.primary.main,
+		color: theme.palette.primary.contrastText,
+		fontWeight: "bold",
+		"&:hover": {
+			background: "#6A33FF",
+		},
+	},
+	customOutlinedBtn: {
+		color: theme.palette.primary.contrastText,
+		borderColor: theme.palette.primary.main,
+		fontWeight: "bold",
+	},
 }));

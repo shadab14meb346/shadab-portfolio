@@ -13,6 +13,6 @@ export const socialMediaProfiles = [
 	},
 	{
 		icon: "EmailIcon.svg",
-		link: "mailto:shadab14meb346@gmail.com",
+		link: "mailto:shadab14meb346@gmail.com?subject=Want%20to%20work%20with%20us%3F",
 	},
 ];

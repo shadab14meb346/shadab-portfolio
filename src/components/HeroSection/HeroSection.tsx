@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import {Typography} from "@material-ui/core";
+import {Box, Button, Typography} from "@material-ui/core";
 
 import {useStyles} from "./useStyles";
 import {heroSection} from "../../portfolioContents/heroSection";
+import classNames from "classnames";
 
 const HeroSection = () => {
 	const classes = useStyles();
@@ -21,6 +22,20 @@ const HeroSection = () => {
 				<Typography variant="body1" className={classes.about}>
 					{heroSection.description}
 				</Typography>
+				<Box className={classes.ctaContainer}>
+					<Button
+						variant="contained"
+						href={heroSection.email}
+						className={classes.customContainedBtn}>
+						Email Me
+					</Button>
+					<Button
+						variant="outlined"
+						href={heroSection.resume}
+						className={classNames(classes.ctaBtn, classes.customOutlinedBtn)}>
+						My Resume
+					</Button>
+				</Box>
 			</div>
 		</div>
 	);

@@ -20,4 +20,8 @@ export const useStyles = makeStyles((theme) => ({
 		textDecoration: "none",
 		color: "#fff",
 	},
+	img: {
+		maxWidth: "100%",
+		height: "auto",
+	},
 }));

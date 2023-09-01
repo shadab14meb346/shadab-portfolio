@@ -24,6 +24,7 @@ const ProjectCard = ({
 				height={949}
 				src={`/${imageFileName}`}
 				alt="project"
+				className={classes.img}
 			/>
 			<Link href={link} style={{textDecoration: "none", color: "inherit"}}>
 				<Typography variant="h3" className={classes.title}>

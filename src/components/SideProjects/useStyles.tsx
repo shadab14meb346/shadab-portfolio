@@ -8,4 +8,8 @@ export const useStyles = makeStyles((theme) => ({
 		marginTop: theme.spacing(4),
 		marginBottom: theme.spacing(1.3),
 	},
+	img: {
+		maxWidth: "100%",
+		height: "auto",
+	},
 }));

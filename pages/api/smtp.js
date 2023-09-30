@@ -25,9 +25,8 @@ const getBestPriority = (addresses) => {
 
 const host = "smtp.mandrillapp.com";
 
-const logs = [];
-
 const verifyEmailWithSMTP = (email) => {
+  const logs = [];
   const [user, domain] = email.split("@");
   return new Promise((resolve, reject) => {
     verifyDnsMx(domain).then((verifiedDomain) => {
@@ -82,7 +81,7 @@ const verifyEmailWithSMTP = (email) => {
         // Handle errors
         client.on("error", (err) => {
           console.error(err);
-          resolve();
+          resolve(logs);
         });
 
         // Handle connection close
@@ -100,7 +99,7 @@ const verifyEmailWithSMTP = (email) => {
               client.end();
               client.destroy();
             }
-            resolve();
+            resolve(logs);
           }
           if (!client.writable) {
             if (!client.destroyed) {
@@ -122,7 +121,7 @@ const verifyEmailWithSMTP = (email) => {
             client.end();
             client.destroy();
           }
-          resolve();
+          resolve(logs);
         });
       } catch (error) {}
     });
@@ -131,6 +130,6 @@ const verifyEmailWithSMTP = (email) => {
 
 export default async (req, res) => {
   const { email } = req.query;
-  await verifyEmailWithSMTP(email);
+  const logs = await verifyEmailWithSMTP(email);
   res.status(200).json({ logs });
 };

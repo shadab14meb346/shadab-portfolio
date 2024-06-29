@@ -10,7 +10,7 @@ export const projects: IProject[] = [
 		description:
 			"BillSplit is a Slack App which I build with a friend. BillSplit makes your life easier by splitting bills, tracking them and getting back the balances, all in Slack",
 		imageFileName: "billsplit-landing-page.png",
-		link: "https://www.billsplit.app/",
+		link: "https://billsplit.softr.app/",
 	},
 	{
 		title: "Word Khoj Chrome Extension",

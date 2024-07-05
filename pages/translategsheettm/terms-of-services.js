@@ -2,12 +2,12 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-export default function TranslateGoogleSheetsTermsOfServices() {
+export default function translategsheettmTermsOfServices() {
 	const seoContent = {
-		title: "Translate Google Sheets | Privacy Policy",
+		title: "Translate G Sheet TM | Privacy Policy",
 		imageURL:
 			"https://i.ibb.co/K2NJ6kC/screenshot-localhost-3000-2021-05-25-20-10-58.png",
-		description: "Privacy policy for using Translate Google Sheets",
+		description: "Privacy policy for using Translate G Sheet TM",
 		domain: "mohdshadab.com",
 		websiteURL: "https://www.mohdshadab.com/",
 	};
@@ -38,14 +38,14 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 			</Head>
 
 			<div style={{margin: "100px", color: "#000000"}}>
-				<h1 style={{textAlign: "center"}}>Translate Google Sheets</h1>
+				<h1 style={{textAlign: "center"}}>Translate G Sheet TM</h1>
 
 				<h1>
 					What is{" "}
-					<a href={googleWorkspacePublishedURL}>Translate Google Sheets</a>?
+					<a href={googleWorkspacePublishedURL}>Translate G Sheet TM</a>?
 				</h1>
 				<p>
-					<a href={googleWorkspacePublishedURL}>Translate Google Sheets</a> is
+					<a href={googleWorkspacePublishedURL}>Translate G Sheet TM</a> is
 					(as its name implies) an add-on created to translate your google
 					sheets. This simple Google Add-on allows you to translate your google
 					sheets in more of 100 languages!
@@ -56,7 +56,7 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 					The privacy policy rules{" "}
 					<a
 						style={{color: "#2A9DF4"}}
-						href="/translategooglesheets/privacy"
+						href="/translategsheettm/privacy"
 						target="_blank">
 						are accessible here
 					</a>
@@ -66,10 +66,9 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 				<h1>Screenshot(s)</h1>
 				<Image
 					src="/screely-1639572723280.png"
-					alt="screenshot of Translate Google Sheets App"
+					alt="screenshot of Translate G Sheet TM App"
 					width={1000}
 					height={600}
-					alt="screenshot of Translate Google Sheets App"
 				/>
 
 				<h1>How it works?</h1>
@@ -81,7 +80,7 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 					src="/screely-1639572909567.png"
 					width={1000}
 					height={600}
-					alt="screenshot of Translate Google Sheets App"
+					alt="image"
 				/>
 
 				<p>
@@ -90,7 +89,7 @@ export default function TranslateGoogleSheetsTermsOfServices() {
 				</p>
 				<Image
 					src="/screely-1639572723280.png"
-					alt="screenshot of Translate Google Sheets"
+					alt="screenshot of Translate G Sheet TM"
 					width={1000}
 					height={600}
 				/>

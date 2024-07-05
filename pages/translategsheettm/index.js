@@ -1,12 +1,13 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 
-export default function TranslateGoogleSheets() {
+export default function translategsheettmTermsOfServices() {
 	const seoContent = {
-		title: "Translate Google Sheets | Privacy Policy",
+		title: "Translate G Sheet TM | Privacy Policy",
 		imageURL:
 			"https://i.ibb.co/K2NJ6kC/screenshot-localhost-3000-2021-05-25-20-10-58.png",
-		description: "Privacy policy for using Translate Google Sheets",
+		description: "Privacy policy for using Translate G Sheet TM",
 		domain: "mohdshadab.com",
 		websiteURL: "https://www.mohdshadab.com/",
 	};
@@ -35,81 +36,76 @@ export default function TranslateGoogleSheets() {
 					content="K_41ZKqHv564ii78LADX1pwJLVUfL0ozNPKRxu5YHUg"
 				/>
 			</Head>
+
 			<div style={{margin: "100px", color: "#000000"}}>
-				<h1 style={{textAlign: "center"}}>Translate Google Sheets</h1>
+				<h1 style={{textAlign: "center"}}>Translate G Sheet TM</h1>
+
+				<h1>
+					What is{" "}
+					<a href={googleWorkspacePublishedURL}>Translate G Sheet TM</a>?
+				</h1>
+				<p>
+					<a href={googleWorkspacePublishedURL}>Translate G Sheet TM</a> is
+					(as its name implies) an add-on created to translate your google
+					sheets. This simple Google Add-on allows you to translate your google
+					sheets in more of 100 languages!
+				</p>
+
 				<h1>Privacy Policy</h1>
 				<p>
-					This privacy policy sets out how{" "}
-					<a href={googleWorkspacePublishedURL} style={{color: "#2A9DF4"}}>
-						Translate Google Sheets
-					</a>{" "}
-					uses and protects any information that you give when you use this
-					application.
-					<a href={googleWorkspacePublishedURL} style={{color: "#2A9DF4"}}>
-						Translate Google Sheets
-					</a>{" "}
-					is committed to ensuring that your privacy is protected. Should we ask
-					you to provide certain information by which you can be identified when
-					using this website, then you can be assured that it will only be used
-					in accordance with this privacy statement.
-					<a href={googleWorkspacePublishedURL} style={{color: "#2A9DF4"}}>
-						Translate Google Sheets
-					</a>{" "}
-					may change this policy from time to time by updating this page. You
-					should check this page from time to time to ensure that you are happy
-					with any changes. This policy is effective from December, 9th 2021.
+					The privacy policy rules{" "}
+					<a
+						style={{color: "#2A9DF4"}}
+						href="/translategsheettm/privacy"
+						target="_blank">
+						are accessible here
+					</a>
+					.
 				</p>
 
-				<h4>What we collect</h4>
-				<p>We may collect the following information:</p>
+				<h1>Screenshot(s)</h1>
+				<Image
+					src="/screely-1639572723280.png"
+					alt="screenshot of Translate G Sheet TM App"
+					width={1000}
+					height={600}
+					alt="screenshot of Translate G Sheet TM App"
+				/>
 
-				<ul>
-					<li>email address</li>
-				</ul>
-
-				<h4>What we do with the information we gather</h4>
+				<h1>How it works?</h1>
 				<p>
-					We require this information to understand your needs and provide you
-					with a better service, and in particular for the following reasons:
+					Step 1: After successfully installed the add-on, the add icon will
+					appear in the side bar menu.{" "}
 				</p>
-				<ul>
-					<li>Internal record keeping</li>
-					<li>
-						We may use the information to improve our products and services
-					</li>
-					<li>Define if you reached the quota limitation</li>
-					<li style={{color: "red"}}>
-						We will never sell or share your information
-					</li>
-				</ul>
+				<Image
+					src="/screely-1639572909567.png"
+					width={1000}
+					height={600}
+					alt="screenshot of Translate G Sheet TM App"
+				/>
 
-				<h4>Quota limitation</h4>
 				<p>
-					Each user has a quota limitation: limit number of translation during
-					24 rolling hours.
+					Step 2: Now, just click on the icon and it will open the a right panel
+					of the Translate Google Sheet as below.
 				</p>
+				<Image
+					src="/screely-1639572723280.png"
+					alt="screenshot of Translate G Sheet TM"
+					width={1000}
+					height={600}
+				/>
 
-				<h4>Security</h4>
 				<p>
-					We are committed to ensuring that your information is secure. In order
-					to prevent unauthorized access or disclosure we have put in place
-					suitable physical, electronic and managerial procedures to safeguard
-					and secure the information we collect online.
+					Step 3: Now first select the columns you want to translate and in this
+					right panel you will be able to select the languages in which you want
+					it to translate.
 				</p>
-
-				<h4>How don't use cookies</h4>
-				<p>
-					<a href={googleWorkspacePublishedURL} style={{color: "#2A9DF4"}}>
-						Translate Google Sheets
-					</a>{" "}
-					don't use cookies.
-				</p>
-
-				<h4>Links to other websites</h4>
-				<p>
-					Our website doesn't contain links to enable you to visit other
-					websites.
-				</p>
+				<img
+					src="/demo translation sheet - Google Sheets (1).gif"
+					alt="how to add on"
+					width={1000}
+					height={600}
+				/>
 				<div style={{width: "30%"}}>
 					<p style={{color: "rgba(0,0,0,0.6)", fontSize: "18px"}}>
 						Md Shadab Alam

@@ -1,27 +1,47 @@
 {
-	"name": "shadab-portfolio",
-	"version": "0.1.0",
-	"private": true,
-	"engines": {
-		"node": "18.x"
-	},
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start"
-	},
-	"dependencies": {
-		"@material-ui/core": "^4.11.3",
-		"@types/material-ui": "^0.21.8",
-		"classnames": "^2.3.1",
-		"next": "^13.4.13",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-intersection-observer": "^8.31.1"
-	},
-	"devDependencies": {
-		"@types/node": "^14.14.31",
-		"@types/react": "^17.0.2",
-		"typescript": "^5.1.6"
-	}
+  "name": "shadab-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier -w .",
+    "format:check": "prettier -c ."
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@types/material-ui": "^0.21.8",
+    "classnames": "^2.3.1",
+    "next": "^13.4.13",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^8.31.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "typescript": "^5.1.6",
+    "husky": "4.3.0",
+    "lint-staged": "12.3.5",
+    "prettier": "^3.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
+  }
 }

@@ -1,42 +1,42 @@
-import {Grid, Typography, Link} from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import Image from "next/image";
 
-import {useStyles} from "./useStyles";
+import { useStyles } from "./useStyles";
 import classNames from "classnames";
 
 interface IStoryCardProps {
-	title: string;
-	description: string;
-	imageFileName: string;
-	link: string;
+  title: string;
+  description: string;
+  imageFileName: string;
+  link: string;
 }
 const StoryCard = ({
-	title,
-	description,
-	imageFileName,
-	link,
+  title,
+  description,
+  imageFileName,
+  link,
 }: IStoryCardProps) => {
-	const classes = useStyles();
-	return (
-		<Grid item sm={6} xs={12}>
-			<Image
-				width={1848}
-				height={949}
-				src={`/${imageFileName}`}
-				alt="image"
-				className={classes.img}
-			/>
-			<Link href={link} target="_blank" className={classes.link}>
-				<Typography variant="h3" className={classes.title}>
-					{title}
-				</Typography>
-			</Link>
+  const classes = useStyles();
+  return (
+    <Grid item sm={6} xs={12}>
+      <Image
+        width={1848}
+        height={949}
+        src={`/${imageFileName}`}
+        alt="image"
+        className={classes.img}
+      />
+      <Link href={link} target="_blank" className={classes.link}>
+        <Typography variant="h3" className={classes.title}>
+          {title}
+        </Typography>
+      </Link>
 
-			<Typography variant="body1" color="textSecondary">
-				{description}
-			</Typography>
-		</Grid>
-	);
+      <Typography variant="body1" color="textSecondary">
+        {description}
+      </Typography>
+    </Grid>
+  );
 };
 
 export default StoryCard;

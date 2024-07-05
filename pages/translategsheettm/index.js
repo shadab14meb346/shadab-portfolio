@@ -44,7 +44,7 @@ export default function translategsheettmTermsOfServices() {
           What is <a href={googleWorkspacePublishedURL}>Translate G Sheet TM</a>
           ?
         </h1>
-        <p>
+        <p style={{ fontSize: "16px", color: "rgb(107 114 128)" }}>
           <a href={googleWorkspacePublishedURL}>Translate G Sheet TM</a> is (as
           its name implies) an add-on created to translate your google sheets.
           This simple Google Add-on allows you to translate your google sheets
@@ -52,7 +52,7 @@ export default function translategsheettmTermsOfServices() {
         </p>
 
         <h1>Privacy Policy</h1>
-        <p>
+        <p style={{ fontSize: "16px", color: "rgb(107 114 128)" }}>
           The privacy policy rules{" "}
           <a
             style={{ color: "#2A9DF4" }}
@@ -65,53 +65,99 @@ export default function translategsheettmTermsOfServices() {
         </p>
 
         <h1>Screenshot(s)</h1>
-        <div>
+        <div
+          style={{
+            background:
+              "linear-gradient(19deg, rgb(33, 212, 253) 0%, rgb(183, 33, 255) 100%);",
+            borderRadius: "8px",
+            maxWidth: "fit-content",
+            padding: "24px",
+          }}
+        >
           <Image
             src="/Demo-Translate-G-Sheet-TM-Google-Sheets.png"
             width={1000}
             height={600}
             alt="screenshot of Translate G Sheet TM App"
+            style={{ borderRadius: "8px" }}
           />
         </div>
 
         <h1>How it works?</h1>
-        <p>
+        <p style={{ fontSize: "16px", color: "rgb(107 114 128)" }}>
           Step 1: After successfully installed the add-on, the add icon will
           appear in the side bar menu.{" "}
         </p>
-        <Image
-          src="/screely-1639572909567.png"
-          width={1000}
-          height={600}
-          alt="screenshot of Translate G Sheet TM App"
-        />
+        <div
+          style={{
+            background:
+              "linear-gradient(19deg, rgb(33, 212, 253) 0%, rgb(183, 33, 255) 100%);",
+            borderRadius: "8px",
+            maxWidth: "fit-content",
+            padding: "24px",
+          }}
+        >
+          <Image
+            src="/Demo-Translate-G-Sheet-TM-Google-Sheets-1.png"
+            width={1000}
+            height={600}
+            alt="screenshot of Translate G Sheet TM App"
+            style={{ borderRadius: "8px" }}
+          />
+        </div>
 
-        <p>
+        <p style={{ fontSize: "16px", color: "rgb(107 114 128)" }}>
           Step 2: Now, just click on the icon and it will open the a right panel
           of the Translate Google Sheet as below.
         </p>
-        <Image
-          src="/screely-1639572723280.png"
-          alt="screenshot of Translate G Sheet TM"
-          width={1000}
-          height={600}
-        />
+        <div
+          style={{
+            background:
+              "linear-gradient(19deg, rgb(33, 212, 253) 0%, rgb(183, 33, 255) 100%);",
+            borderRadius: "8px",
+            maxWidth: "fit-content",
+            padding: "24px",
+          }}
+        >
+          <Image
+            src="/Demo-Translate-G-Sheet-TM-Google-Sheets.png"
+            width={1000}
+            height={600}
+            alt="screenshot of Translate G Sheet TM App"
+            style={{ borderRadius: "8px" }}
+          />
+        </div>
 
-        <p>
+        <p style={{ fontSize: "16px", color: "rgb(107 114 128)" }}>
           Step 3: Now first select the columns you want to translate and in this
           right panel you will be able to select the languages in which you want
           it to translate.
         </p>
-        <img
-          src="/demo translation sheet - Google Sheets (1).gif"
-          alt="how to add on"
-          width={1000}
-          height={600}
-        />
+        <div
+          style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: "600px",
+            width: "1000px",
+          }}
+        >
+          <iframe
+            src="https://www.loom.com/embed/f2a17eac3d8e4019a0025fd9b0a3c524?sid=e50793f5-35b5-46c0-ac05-3a4f0669e6b3"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style={{
+              position: "absolute",
+              top: "0",
+              left: "0",
+              width: "100%",
+              height: "100%",
+            }}
+          ></iframe>
+        </div>
         <div style={{ width: "30%" }}>
-          <p style={{ color: "rgba(0,0,0,0.6)", fontSize: "18px" }}>
-            Md Shadab Alam
-          </p>
+          <p style={{ color: "rgba(0,0,0,0.6)", fontSize: "18px" }}>Shadab</p>
           <div
             style={{
               display: "grid",

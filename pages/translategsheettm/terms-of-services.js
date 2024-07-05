@@ -107,9 +107,7 @@ export default function translategsheettmTermsOfServices() {
           height={600}
         />
         <div style={{ width: "30%" }}>
-          <p style={{ color: "rgba(0,0,0,0.6)", fontSize: "18px" }}>
-            Md Shadab Alam
-          </p>
+          <p style={{ color: "rgba(0,0,0,0.6)", fontSize: "18px" }}>Shadab</p>
           <div
             style={{
               display: "grid",

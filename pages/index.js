@@ -61,7 +61,7 @@ export default function Home() {
   };
 
   const seoContent = {
-    title: "Md Shadab Alam | MERN Stack Developer",
+    title: "Md Shadab Alam | Full Stack Developer",
     imageURL:
       "https://i.ibb.co/K2NJ6kC/screenshot-localhost-3000-2021-05-25-20-10-58.png",
     description: heroSection.description,

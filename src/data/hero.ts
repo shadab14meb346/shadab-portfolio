@@ -1,0 +1,11 @@
+export const heroContent = {
+  name: "Md Shadab Alam",
+  role: "Full Stack Developer",
+  location: "India",
+  avatar: "/linkedin-pic.jpg",
+  description:
+    "Frontend-heavy full-stack developer with 6+ years of experience transforming ideas into intuitive, high-impact products.",
+  resume:
+    "https://docs.google.com/document/u/0/d/12-CsoD1E50fPkaw7kw8EplWOKbOP4MVhjj5Fn0o3dc4/mobilebasic?pli=1",
+  email: "mailto:shadab14meb346@gmail.com?subject=Let%27s%20work%20together",
+};

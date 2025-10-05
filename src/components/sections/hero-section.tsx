@@ -10,7 +10,7 @@ export function HeroSection() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden pb-20 pt-24 sm:pb-28 sm:pt-32"
+      className="relative overflow-hidden pb-20 pt-24 sm:pb-14 sm:pt-16"
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[hsl(var(--hero-gradient-from))] to-[hsl(var(--hero-gradient-to))]" />
       <div className="container grid items-center gap-16 lg:grid-cols-[1.1fr_minmax(0,0.9fr)]">

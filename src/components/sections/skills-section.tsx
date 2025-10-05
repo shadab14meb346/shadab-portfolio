@@ -1,4 +1,5 @@
-import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
+
 import { SectionHeader } from "@/components/sections/section-header";
 import { skills } from "@/data/skills";
 
@@ -17,12 +18,24 @@ export function SkillsSection() {
               key={skill.name}
               className="rounded-2xl border border-border bg-card/70 p-6 shadow-sm transition hover:-translate-y-1 hover:border-primary/40"
             >
-              <Badge
-                variant="outline"
-                className="mb-3 border-primary/40 text-primary"
-              >
-                {skill.name}
-              </Badge>
+              <div className="mb-4 flex items-center gap-4">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  {skill.iconImage ? (
+                    <Image
+                      src={skill.iconImage}
+                      alt={skill.name}
+                      width={28}
+                      height={28}
+                      className="h-7 w-7 object-contain"
+                    />
+                  ) : skill.icon ? (
+                    <skill.icon className="h-6 w-6" aria-hidden />
+                  ) : null}
+                </span>
+                <h3 className="text-lg font-semibold text-foreground">
+                  {skill.name}
+                </h3>
+              </div>
               {skill.description ? (
                 <p className="text-sm text-muted-foreground">
                   {skill.description}

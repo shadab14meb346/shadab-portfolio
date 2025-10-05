@@ -1,5 +1,6 @@
 export interface WorkExperienceEngagement {
   company: string;
+  logo?: string;
   role: string;
   employmentType: string;
   period: string;
@@ -8,15 +9,16 @@ export interface WorkExperienceEngagement {
   color: string;
   summary: string;
   highlights: string[];
-  readMore?: {
+  links?: Array<{
     label: string;
     href: string;
-  };
+  }>;
 }
 
 export const workExperience: WorkExperienceEngagement[] = [
   {
     company: "Airbase",
+    logo: "/logos/airbase.svg",
     role: "Software Engineer II",
     employmentType: "Full-time",
     period: "Dec 2023 – Present",
@@ -31,32 +33,42 @@ export const workExperience: WorkExperienceEngagement[] = [
       "Standardized a reusable UI component system that eliminated thousands of lines of duplicate code.",
       "Ramped up on unfamiliar product areas to deliver enterprise-critical features on compressed timelines.",
     ],
-    readMore: {
-      label: "View role",
-      href: "https://www.linkedin.com/in/md-shadab-alam/",
-    },
+    links: [
+      {
+        label: "Company website",
+        href: "https://www.airbase.com/",
+      },
+    ],
   },
   {
     company: "Magically AI",
-    website: "https://magicallyai.carrd.co/",
+    logo: "/logos/magically-ai.svg",
     role: "Software Developer",
     employmentType: "Contract · Freelance",
     period: "Sep 2023 – Dec 2023",
-    location: "United States · Remote",
+    location: "Remote",
+    website: "https://magicallyai.carrd.co/",
     color: "#0EA5E9",
     summary:
-      "Partnered with founding team to prototype AI-first consumer products end-to-end.",
+      "Worked as a freelancer/contractor to prototype AI-first consumer products end-to-end.",
     highlights: [
-      "Designed and implemented the full UI/UX for a cross-platform React Native app that solves math problems from camera input.",
+      "Implemented the full UI/UX for a cross-platform React Native app that solves math problems from camera input using AI",
       "Built an MVP that auto-generates faceless short-form videos using OpenAI, FFmpeg, and stock footage for rapid social publishing.",
     ],
-    readMore: {
-      label: "Project recap",
-      href: "https://magicallyai.carrd.co/",
-    },
+    links: [
+      {
+        label: "MyStudyMate App",
+        href: "https://mystudymate.ai/",
+      },
+      {
+        label: "Company website",
+        href: "https://magicallyai.carrd.co/",
+      },
+    ],
   },
   {
     company: "EaseData & Peekletters",
+    logo: "/logos/peekletters.svg",
     role: "Technical Founder",
     employmentType: "Founder",
     period: "Jul 2022 – Jul 2023",
@@ -69,24 +81,42 @@ export const workExperience: WorkExperienceEngagement[] = [
       "Launched an EaseData lab-test booking platform with Next.js, Serverless, GraphQL, and Postgres to improve diagnostic journeys.",
       "Delivered secure CRM APIs and automated GPT-4 powered cold-email personalization for Peekletters with a 70% reply rate.",
     ],
+    links: [
+      {
+        label: "Peekletters",
+        href: "https://peekletters.vercel.app/",
+      },
+    ],
   },
   {
     company: "Quorilla & Fable",
+    logo: "/logos/quorilla.svg",
     role: "Remote Frontend Engineer",
     employmentType: "Contract",
     period: "Aug 2020 – Jul 2022",
     location: "Remote",
     color: "#F97316",
     summary:
-      "Scaled an ed-tech platform and productivity tooling for distributed teams.",
+      "Worked as a founding engineer with the same founders building an EdTech startup and a productivity startup.",
     highlights: [
-      "Integrated TokBox WebRTC to deliver two-way classroom streaming, boosting course completion and engagement.",
-      "Extended the LMS with social learning capabilities including posts, comments, and resource sharing.",
+      "Integrated TokBox APIs to deliver two-way classroom streaming, boosting course completion and engagement.",
       "Shipped Fable – a Chrome extension powering async team collaboration and task flows.",
+      "Extended the LMS with social learning capabilities including posts, comments, and resource sharing.",
+    ],
+    links: [
+      {
+        label: "Quorilla",
+        href: "https://quorilla.com/",
+      },
+      {
+        label: "Fable extension",
+        href: "https://chrome.google.com/webstore/detail/fable/",
+      },
     ],
   },
   {
     company: "The Cumin Club",
+    logo: "/logos/cumin-club.svg",
     role: "Backend Developer",
     employmentType: "Contract",
     period: "Feb 2022 – Jul 2022",
@@ -100,9 +130,16 @@ export const workExperience: WorkExperienceEngagement[] = [
       "Designed migration-safe database schemas and untangled tightly coupled tables for performance gains.",
       "Introduced automated testing and CI/CD pipelines to accelerate releases with confidence.",
     ],
+    links: [
+      {
+        label: "The Cumin Club",
+        href: "https://www.thecuminclub.com/",
+      },
+    ],
   },
   {
     company: "Tata Consultancy Services",
+    logo: "/logos/tcs.svg",
     role: "Full Stack Developer",
     employmentType: "Full-time",
     period: "Nov 2018 – Aug 2020",
@@ -114,6 +151,12 @@ export const workExperience: WorkExperienceEngagement[] = [
     highlights: [
       "Translated business use cases into production-ready UI, chaincode, and REST APIs in Node.js.",
       "Prototyped blockchain MVPs across supply chain and transaction management with Hyperledger Fabric.",
+    ],
+    links: [
+      {
+        label: "TCS",
+        href: "https://www.tcs.com/",
+      },
     ],
   },
 ];

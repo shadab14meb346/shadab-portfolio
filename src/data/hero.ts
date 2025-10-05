@@ -1,7 +1,7 @@
 export const heroContent = {
   name: "Shadab",
-  role: "Full Stack Developer",
   location: "India",
+  role: "Product Engineer",
   avatar: "/linkedin-pic.jpg",
   description:
     "Frontend-heavy full-stack developer with 7+ years of experience transforming ideas into intuitive, high-impact products.",

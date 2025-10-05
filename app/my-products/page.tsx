@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 const statusStyles: Record<string, string> = {
   live: "bg-emerald-500/10 text-emerald-500 border border-emerald-500/30",
@@ -54,29 +55,54 @@ export default function MyProductsPage() {
     []
   );
 
+  const tabs = useMemo(() => {
+    const uniqueTypes = Array.from(new Set(products.map((product) => product.type)));
+    const orderedTypes = ["Product", "Side-Project", ...uniqueTypes].filter(
+      (value, index, array) => array.indexOf(value) === index,
+    );
+
+    return [
+      { id: "all", label: "All", type: undefined as string | undefined },
+      ...orderedTypes.map((type) => ({
+        id: type.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+        label: type,
+        type,
+      })),
+    ];
+  }, []);
+
+  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id ?? "all");
+
+  const activeType = useMemo(
+    () => tabs.find((tab) => tab.id === activeTab)?.type,
+    [tabs, activeTab],
+  );
+
+  const filteredProducts = useMemo(
+    () =>
+      sortedProducts.filter((product) =>
+        activeType ? product.type === activeType : true,
+      ),
+    [sortedProducts, activeType],
+  );
+
   return (
     <div className="bg-background text-foreground">
       <section className="border-b border-border/60 bg-gradient-to-br from-[hsl(var(--hero-gradient-from))] via-background to-[hsl(var(--hero-gradient-to))]">
         <div className="container space-y-6 py-16 md:py-24">
-          <Badge variant="outline" className="border-primary/40 text-primary">
-            Product Portfolio
-          </Badge>
+          <span className="text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+            My Products Portfolio
+          </span>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Experiments, products, and lessons from the trenches
           </h1>
           <p className="max-w-3xl text-lg text-muted-foreground">
             A living archive of everything I've shipped—from Chrome extensions
-            and Slack apps to SaaS experiments and acquired side projects. Each
-            card captures the journey, the impact, and the insight I carried
-            forward.
+            and Slack apps to SaaS experiments and sold side projects. Each card
+            captures the journey, the impact, and the insight I carried forward.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild variant="outline" size="sm">
-              <Link href="/translategsheettm">
-                Latest product: Translate G Sheet TM →
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" size="sm">
               <Link href="/">Back to portfolio</Link>
             </Button>
           </div>
@@ -84,12 +110,47 @@ export default function MyProductsPage() {
       </section>
 
       <section className="container space-y-8 py-16 md:py-20">
+        <div className="border-b border-border/60 pb-1">
+          <div
+            className="flex gap-6 text-sm font-medium text-muted-foreground"
+            role="tablist"
+            aria-label="Filter products by type"
+          >
+            {tabs.map((tab) => {
+              const isActive = tab.id === activeTab;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  className={cn(
+                    "relative pb-3 transition-colors hover:text-foreground focus-visible:outline-none",
+                    isActive && "text-foreground",
+                  )}
+                  onClick={() => setActiveTab(tab.id)}
+                >
+                  {tab.label}
+                  <span
+                    className={cn(
+                      "pointer-events-none absolute inset-x-0 bottom-0 h-[2px] rounded-full bg-primary/60 transition-opacity",
+                      isActive ? "opacity-100" : "opacity-0",
+                    )}
+                    aria-hidden
+                  />
+                </button>
+              );
+            })}
+          </div>
+        </div>
         <div className="grid gap-6 md:grid-cols-2">
-          {sortedProducts.map((product) => (
+          {filteredProducts.map((product) => (
             <ProductCard key={product.name} product={product} />
           ))}
         </div>
       </section>
+
+      <SiteFooter />
     </div>
   );
 }
@@ -130,10 +191,20 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
     { label: "Skills Demonstrated", value: product.skills },
   ];
 
+  const linkButtons = [
+    product.website
+      ? {
+          label: "Explore",
+          href: product.website,
+        }
+      : null,
+    ...(product.links ?? []),
+  ].filter(Boolean) as Array<{ label: string; href: string }>;
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border/60 border-dashed bg-card/80 shadow-sm transition hover:-translate-y-1 hover:border-primary/40">
       {product.video ? (
-        <div className="relative h-76 w-full overflow-hidden border-b border-border/60">
+        <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-border/60">
           <video
             src={product.video}
             autoPlay
@@ -145,12 +216,12 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
           />
         </div>
       ) : product.image ? (
-        <div className="relative h-76 w-full overflow-hidden border-b border-border/60">
+        <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-border/60">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(min-width: 1024px) 33vw, 100vw"
           />
         </div>
@@ -229,17 +300,22 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
       </div>
       <div className="flex items-center justify-between gap-3 border-t border-border/60 px-6 py-4">
         <div className="flex flex-wrap items-center gap-3">
-          {product.website ? (
+          {linkButtons.map((link) => (
             <Button
+              key={`${product.name}-${link.label}`}
               asChild
               variant="link"
               className="px-0 text-sm font-semibold"
             >
-              <Link href={product.website} target="_blank" rel="noreferrer">
-                Explore →
+              <Link
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+              >
+                {link.label} →
               </Link>
             </Button>
-          ) : null}
+          ))}
         </div>
         <Button
           variant="ghost"

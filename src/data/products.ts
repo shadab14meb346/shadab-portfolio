@@ -20,6 +20,10 @@ export interface ProductEntry {
   website?: string;
   image?: string;
   video?: string;
+  links?: Array<{
+    label: string;
+    href: string;
+  }>;
   stageSummary: string;
   users?: string;
   revenueOutcome?: string;
@@ -44,7 +48,7 @@ export const products: ProductEntry[] = [
     statusNote: "Marketplace review rejection",
     website: "https://zuribase.com/sync-item-across-boards",
     video:
-      "https://screen-studio-shareable-links.67aa83ffa7fb557cd114a7156fca4e73.r2.cloudflarestorage.com/r8UZ7dCF-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=363e5c20253db1195c87384f6dfb4c99%2F20251005%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251005T164726Z&X-Amz-Expires=7200&X-Amz-Signature=a4e2e90d2e784d800506f481e9d25495a39937ae76dda69db08be90f5bb64676&X-Amz-SignedHeaders=host&x-id=GetObject",
+      "https://screen-studio-shareable-links.67aa83ffa7fb557cd114a7156fca4e73.r2.cloudflarestorage.com/I2xQI3rk-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=363e5c20253db1195c87384f6dfb4c99%2F20251005%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251005T173625Z&X-Amz-Expires=7200&X-Amz-Signature=d5fa991e65dcab0e518c543134ec8a8b578ebd370dc759d6cb2583da4500d4b8&X-Amz-SignedHeaders=host&x-id=GetObject",
     stageSummary:
       "Marketplace-ready MVP rejected due to external review limits",
     users: "—",
@@ -61,6 +65,12 @@ export const products: ProductEntry[] = [
     challenges: "Platform dependency risk",
     learnings: "Validate platform dependency early",
     skills: "Product strategy, API integration, SaaS publishing",
+    links: [
+      {
+        label: "Watch Demo",
+        href: "https://screen-studio-shareable-links.67aa83ffa7fb557cd114a7156fca4e73.r2.cloudflarestorage.com/I2xQI3rk-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=363e5c20253db1195c87384f6dfb4c99%2F20251005%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251005T173625Z&X-Amz-Expires=7200&X-Amz-Signature=d5fa991e65dcab0e518c543134ec8a8b578ebd370dc759d6cb2583da4500d4b8&X-Amz-SignedHeaders=host&x-id=GetObject",
+      },
+    ],
   },
   {
     name: "MockFill",
@@ -125,7 +135,7 @@ export const products: ProductEntry[] = [
     timeline: "2024",
     status: "paused",
     website: "https://aitweetmate.vercel.app/",
-    image: "/products/tweetflick_dashboard.png",
+    image: "/products/aitweetmate.png",
     stageSummary: "Paused post-backlash, archived for relaunch ideas",
     users: "~200 users",
     revenueOutcome: "—",
@@ -147,7 +157,7 @@ export const products: ProductEntry[] = [
     timeline: "2021",
     status: "dropped",
     website: "https://focuslyai.vercel.app/",
-    image: "/billsplit-landing-page.png",
+    image: "/products/billsplit-landing-page.png",
     stageSummary: "Dropped after validation round",
     problem: "Notification overload in Slack",
     solution: "AI prioritizes important messages and actions for teams.",
@@ -190,7 +200,7 @@ export const products: ProductEntry[] = [
     timeline: "2022",
     status: "idea",
     website: "https://rendercraft.softr.app/",
-    image: "/products/screely-1639061984266.png",
+    image: "/products/rendercraft.png",
     stageSummary: "Landing-page-only prototype",
     problem: "Design automation tools lack UX clarity",
     solution:
@@ -210,7 +220,7 @@ export const products: ProductEntry[] = [
     timeline: "2021",
     status: "closed",
     website: "https://peekletters.vercel.app/",
-    image: "/products/peekletters.svg",
+    image: "/products/peekletters.png",
     stageSummary: "Earned revenue, validated offer",
     users: "~50 users",
     revenueOutcome: "₹30k",
@@ -231,7 +241,7 @@ export const products: ProductEntry[] = [
     timeline: "2020",
     status: "acquired",
     website: "https://tweetflick.com/",
-    image: "/tweetflick_dashboard.png",
+    image: "/products/tweetflick_dashboard.png",
     stageSummary: "Successful micro-acquisition",
     users: "10k+ users",
     revenueOutcome: "Sold for $5k",
@@ -269,7 +279,7 @@ export const products: ProductEntry[] = [
     category: "Shopify App",
     timeline: "2021",
     status: "dropped",
-    image: "/products/screely-1639572909567.png",
+    image: "/products/shoppable-tiktok-feed.png",
     stageSummary: "Dropped after sandbox",
     problem: "Merchants wanted UGC-like feeds",
     solution: "Shopify app concept that surfaces UGC-style product feeds.",

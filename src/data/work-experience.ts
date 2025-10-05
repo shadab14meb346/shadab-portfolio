@@ -41,7 +41,7 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://www.airbase.com/",
       },
     ],
-    categories: ["contract"],
+    categories: ["full-time"],
   },
   {
     company: "Magically AI",
@@ -199,7 +199,6 @@ export const workExperience: WorkExperienceEngagement[] = [
   },
   {
     company: "Tata Consultancy Services",
-    logo: "/logos/tcs.svg",
     role: "Full Stack Developer",
     employmentType: "Full-time",
     period: "Nov 2018 – Aug 2020",

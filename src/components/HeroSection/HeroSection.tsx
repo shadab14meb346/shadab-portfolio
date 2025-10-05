@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className={classes.imageContainer}>
         <Image
           src="/linkedin-pic.jpg"
-          width={433}
+          width={400}
           height={577}
           alt="shadab-image"
         />

@@ -4,7 +4,7 @@ export interface Story {
   image: string;
   href: string;
 }
-
+//
 export const stories: Story[] = [
   {
     title: "From Mechanical Engineer to Software Developer",

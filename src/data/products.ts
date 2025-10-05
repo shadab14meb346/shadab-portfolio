@@ -261,7 +261,7 @@ export const products: ProductEntry[] = [
     category: "SaaS Tool",
     timeline: "2022",
     status: "poc",
-    image: "/products/screely-1639572723280.png",
+    image: "/products/easedata.png",
     stageSummary: "Early internal prototype only",
     problem: "Data scattered across tools",
     solution: "Unified access via APIs to HubSpot, databases, and Sheets.",
@@ -271,6 +271,7 @@ export const products: ProductEntry[] = [
     challenges: "Complexity scope-creep",
     learnings: "Start narrow, expand later",
     skills: "API architecture, automation",
+    website: "https://easedata-lp.vercel.app/",
   },
   {
     name: "Shoppable Feed App",

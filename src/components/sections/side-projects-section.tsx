@@ -13,6 +13,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/sections/section-header";
 import { sideProjects } from "@/data/side-projects";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { Info } from "lucide-react";
 
 export function SideProjectsSection() {
   return (
@@ -61,8 +67,8 @@ export function SideProjectsSection() {
                           badge === "Live"
                             ? "success"
                             : badge === "Slack App"
-                            ? "outline"
-                            : "muted";
+                              ? "outline"
+                              : "muted";
                         return (
                           <Badge key={badge} variant={variant}>
                             {badge}
@@ -70,9 +76,20 @@ export function SideProjectsSection() {
                         );
                       }
                       return (
-                        <Badge key={badge.tooltip} variant="danger" className="cursor-help" title={badge.tooltip}>
-                          Down
-                        </Badge>
+                        <HoverCard key={badge.tooltip}>
+                          <HoverCardTrigger asChild>
+                            <Badge
+                              variant="danger"
+                              className="inline-flex items-center gap-1"
+                            >
+                              <span>Down</span>
+                              <Info className="h-3.5 w-3.5" aria-hidden />
+                            </Badge>
+                          </HoverCardTrigger>
+                          <HoverCardContent className="text-xs leading-relaxed">
+                            {badge.tooltip}
+                          </HoverCardContent>
+                        </HoverCard>
                       );
                     })}
                   </div>

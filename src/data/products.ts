@@ -141,7 +141,7 @@ export const products: ProductEntry[] = [
     tagline: "AI reply suggestions that match your tone on X",
     category: "Chrome Extension",
     timeline: "2024",
-    status: "paused",
+    status: "live",
     website: "https://aitweetmate.vercel.app/",
     image: "/products/aitweetmate.png",
     stageSummary:

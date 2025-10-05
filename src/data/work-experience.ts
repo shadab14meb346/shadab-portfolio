@@ -68,7 +68,7 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://magicallyai.carrd.co/",
       },
     ],
-    categories: ["contract"],
+    categories: ["full-time"],
   },
   {
     company: "EaseData & Peekletters",
@@ -79,7 +79,7 @@ export const workExperience: WorkExperienceEngagement[] = [
     location: "Remote",
     color: "#059669",
     summary:
-      "Built health-tech and GTM automation products selected for the Antler India founder residency.",
+      "Was starting up worked on 2-3 ideas during this period, learnt a lot about product development and entrepreneurship.",
     highlights: [
       "One of 70 founders chosen from 1,500+ applicants for Antler India’s entrepreneurial program.",
       "Launched an EaseData lab-test booking platform with Next.js, Serverless, GraphQL, and Postgres to improve diagnostic journeys.",
@@ -99,7 +99,7 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://x.com/AntlerIndia/status/1543134948072488960",
       },
     ],
-    categories: ["full-time", "contract"],
+    categories: ["full-time"],
   },
   {
     company: "Quorilla & Fable",
@@ -154,9 +154,10 @@ export const workExperience: WorkExperienceEngagement[] = [
   },
   {
     company: "Publaunch",
-    logo: "/logos/publaunch.svg",
+    logo: "/logos/publaunch.png",
     role: "Frontend Developer",
     employmentType: "Freelance",
+    bgColor: "bg-white",
     period: "2021",
     location: "Remote",
     color: "#EA7A15",

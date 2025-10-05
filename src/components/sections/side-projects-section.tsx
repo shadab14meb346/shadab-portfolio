@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/sections/section-header";
 import { sideProjects } from "@/data/side-projects";
 
@@ -52,6 +53,30 @@ export function SideProjectsSection() {
                 <CardTitle className="text-xl font-semibold">
                   {project.title}
                 </CardTitle>
+                {project.badges?.length ? (
+                  <div className="flex flex-wrap gap-2">
+                    {project.badges.map((badge) => {
+                      if (typeof badge === "string") {
+                        const variant =
+                          badge === "Live"
+                            ? "success"
+                            : badge === "Slack App"
+                            ? "outline"
+                            : "muted";
+                        return (
+                          <Badge key={badge} variant={variant}>
+                            {badge}
+                          </Badge>
+                        );
+                      }
+                      return (
+                        <Badge key={badge.tooltip} variant="danger" className="cursor-help" title={badge.tooltip}>
+                          Down
+                        </Badge>
+                      );
+                    })}
+                  </div>
+                ) : null}
               </CardHeader>
               <CardContent className="flex-1">
                 <CardDescription className="text-base leading-relaxed text-muted-foreground">

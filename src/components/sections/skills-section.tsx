@@ -7,7 +7,7 @@ export function SkillsSection() {
     <section id="skills" className="py-20 sm:py-28">
       <div className="container space-y-12">
         <SectionHeader
-          eyebrow="Capabilities"
+          eyebrow="Skills"
           title="What I bring to a squad"
           description="A product-minded engineer comfortable owning the entire web stack."
         />

@@ -234,7 +234,7 @@ export const products: ProductEntry[] = [
     stageSummary:
       "Earned revenue, proved willingness to pay; closed after channel tests",
     users: "~50 users",
-    revenueOutcome: "₹30k",
+    revenueOutcome: "earned around $300",
     problem: "Cold outreach sounded robotic and failed to convert",
     solution:
       "Automated, personalized ‘letter’ emails with hooks tailored to recipient context",

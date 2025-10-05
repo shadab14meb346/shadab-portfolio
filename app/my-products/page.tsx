@@ -56,9 +56,11 @@ export default function MyProductsPage() {
   );
 
   const tabs = useMemo(() => {
-    const uniqueTypes = Array.from(new Set(products.map((product) => product.type)));
+    const uniqueTypes = Array.from(
+      new Set(products.map((product) => product.type))
+    );
     const orderedTypes = ["Product", "Side-Project", ...uniqueTypes].filter(
-      (value, index, array) => array.indexOf(value) === index,
+      (value, index, array) => array.indexOf(value) === index
     );
 
     return [
@@ -75,15 +77,15 @@ export default function MyProductsPage() {
 
   const activeType = useMemo(
     () => tabs.find((tab) => tab.id === activeTab)?.type,
-    [tabs, activeTab],
+    [tabs, activeTab]
   );
 
   const filteredProducts = useMemo(
     () =>
       sortedProducts.filter((product) =>
-        activeType ? product.type === activeType : true,
+        activeType ? product.type === activeType : true
       ),
-    [sortedProducts, activeType],
+    [sortedProducts, activeType]
   );
 
   return (
@@ -126,7 +128,7 @@ export default function MyProductsPage() {
                   aria-selected={isActive}
                   className={cn(
                     "relative pb-3 transition-colors hover:text-foreground focus-visible:outline-none",
-                    isActive && "text-foreground",
+                    isActive && "text-foreground"
                   )}
                   onClick={() => setActiveTab(tab.id)}
                 >
@@ -134,7 +136,7 @@ export default function MyProductsPage() {
                   <span
                     className={cn(
                       "pointer-events-none absolute inset-x-0 bottom-0 h-[2px] rounded-full bg-primary/60 transition-opacity",
-                      isActive ? "opacity-100" : "opacity-0",
+                      isActive ? "opacity-100" : "opacity-0"
                     )}
                     aria-hidden
                   />
@@ -163,7 +165,7 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
     { label: "Stage", value: product.stageSummary },
     { label: "Problem", value: product.problem },
     { label: "Solution", value: product.solution },
-    { label: "Role", value: product.role },
+    // { label: "Role", value: product.role },
     { label: "Stack", value: product.stack },
     product.users ? { label: "Users / Traction", value: product.users } : null,
     product.revenueOutcome

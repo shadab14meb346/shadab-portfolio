@@ -316,7 +316,7 @@ export const products: ProductEntry[] = [
     status: "live",
     website:
       "https://chrome.google.com/webstore/detail/word-khoj/bdocoepjnibclhlibcccnjpgeknhdlah",
-    image: "/products/word-Khoj-extension.png",
+    image: "/products/word-Khoj-extension-img.png",
     stageSummary: "Lightweight, still functional",
     users: "500+",
     revenueOutcome: "Free",

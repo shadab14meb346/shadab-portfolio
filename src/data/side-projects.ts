@@ -27,7 +27,7 @@ export const sideProjects: SideProject[] = [
     title: "Word Khoj",
     description:
       "Chrome extension that transliterates Hindi phrases and highlights relevant matches on any web page.",
-    image: "/products/word-Khoj-extension.png",
+    image: "/products/word-Khoj-extension-img.png",
     href: "https://chrome.google.com/webstore/detail/word-khoj/bdocoepjnibclhlibcccnjpgeknhdlah?hl=en-GB&authuser=7",
     badges: ["Live", "Chrome Extension"],
   },

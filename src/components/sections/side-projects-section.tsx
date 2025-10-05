@@ -18,7 +18,7 @@ export function SideProjectsSection() {
     <section id="side-projects" className="py-20 sm:py-28">
       <div className="container space-y-12">
         <SectionHeader
-          eyebrow="Side Projects"
+          eyebrow="Side Projects/Products"
           title="Things I hack on nights & weekends"
           description="Experiments that sharpen my instincts and bring delightful tools to life."
         />
@@ -29,13 +29,24 @@ export function SideProjectsSection() {
               className="group flex h-full flex-col overflow-hidden border-dashed"
             >
               <div className="relative h-52 w-full overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(min-width: 1024px) 33vw, 100vw"
-                />
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover"
+                  />
+                ) : project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                  />
+                ) : null}
               </div>
               <CardHeader>
                 <CardTitle className="text-xl font-semibold">

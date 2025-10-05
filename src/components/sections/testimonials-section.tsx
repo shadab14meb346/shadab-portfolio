@@ -50,14 +50,11 @@ export function TestimonialsSection() {
                       {testimonial.name}
                     </Link>
                   </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground">
-                    {new URL(testimonial.href).hostname.replace("www.", "")}
-                  </CardDescription>
                 </div>
               </CardHeader>
               <CardContent className="p-0">
                 <p className="text-base leading-relaxed text-muted-foreground">
-                  """{testimonial.quote}"""
+                  "{testimonial.quote}"
                 </p>
               </CardContent>
             </Card>

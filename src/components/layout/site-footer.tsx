@@ -8,14 +8,14 @@ export function SiteFooter() {
       <div className="container flex flex-col gap-8 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
         <div className="space-y-2">
           <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
-            Let's build
+            Let's Talk
           </p>
           <h3 className="text-2xl font-semibold text-foreground sm:text-3xl">
-            mdshadabalam@gmail.com
+            Feel free to reach out!
           </h3>
           <p className="text-muted-foreground">
-            Available for partnerships, product engineering, and fractional
-            leadership roles.
+            Available for partnerships, mentorship, product engineering, and
+            fractional leadership roles.
           </p>
         </div>
         <div className="flex flex-col items-center gap-4 sm:items-end">

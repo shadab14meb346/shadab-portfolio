@@ -13,6 +13,8 @@ export interface WorkExperienceEngagement {
     label: string;
     href: string;
   }>;
+  categories: Array<"full-time" | "contract">;
+  bgColor?: string;
 }
 
 export const workExperience: WorkExperienceEngagement[] = [
@@ -39,6 +41,7 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://www.airbase.com/",
       },
     ],
+    categories: ["full-time"],
   },
   {
     company: "Magically AI",
@@ -65,6 +68,7 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://magicallyai.carrd.co/",
       },
     ],
+    categories: ["contract"],
   },
   {
     company: "EaseData & Peekletters",
@@ -86,7 +90,16 @@ export const workExperience: WorkExperienceEngagement[] = [
         label: "Peekletters",
         href: "https://peekletters.vercel.app/",
       },
+      {
+        label: "EaseData",
+        href: "https://easedata.vercel.app/",
+      },
+      {
+        label: "Antler India",
+        href: "https://x.com/AntlerIndia/status/1543134948072488960",
+      },
     ],
+    categories: ["full-time", "contract"],
   },
   {
     company: "Quorilla & Fable",
@@ -113,6 +126,7 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://chrome.google.com/webstore/detail/fable/",
       },
     ],
+    categories: ["full-time", "contract"],
   },
   {
     company: "The Cumin Club",
@@ -136,6 +150,51 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://www.thecuminclub.com/",
       },
     ],
+    categories: ["contract"],
+  },
+  {
+    company: "Publaunch",
+    logo: "/logos/publaunch.svg",
+    role: "Frontend Developer",
+    employmentType: "Freelance",
+    period: "2021",
+    location: "Remote",
+    color: "#EA7A15",
+    summary:
+      "Worked as a freelance frontend developer delivering feature modules for their publishing platform.",
+    highlights: [
+      "Shipped bespoke UI flows that improved author onboarding and campaign management.",
+      "Collaborated directly with the founding team to translate product concepts into production-ready React components.",
+    ],
+    links: [
+      {
+        label: "Publaunch",
+        href: "https://www.publaunch.com/",
+      },
+    ],
+    categories: ["contract"],
+  },
+  {
+    company: "Geekflare Assist",
+    logo: "/logos/geekflare.svg",
+    role: "Full Stack Developer",
+    employmentType: "Freelance",
+    period: "2021",
+    location: "Remote",
+    color: "#0F766E",
+    summary:
+      "Built GPT-3 powered support experiences that answered Unix, SQL, and DevOps questions for users.",
+    highlights: [
+      "Developed GraphQL APIs with Node.js to orchestrate OpenAI prompts and deliver contextual answers.",
+      "Implemented a performant Next.js frontend that surfaced chat history, suggestions, and usage analytics.",
+    ],
+    links: [
+      {
+        label: "Geekflare Assist",
+        href: "https://geekflare.com/assist/",
+      },
+    ],
+    categories: ["contract"],
   },
   {
     company: "Tata Consultancy Services",
@@ -154,9 +213,33 @@ export const workExperience: WorkExperienceEngagement[] = [
     ],
     links: [
       {
-        label: "TCS",
+        label: "Company website",
         href: "https://www.tcs.com/",
       },
     ],
+    categories: ["full-time"],
+  },
+  {
+    company: "Siterecon",
+    logo: "/logos/siterecon.svg",
+    bgColor: "bg-white",
+    role: "Frontend Engineer",
+    employmentType: "Freelance",
+    location: "Remote",
+    website: "https://order.siterecon.ai/",
+    color: "#7C3AED",
+    period: "2 Months",
+    highlights: [
+      "Worked as a freelancer frontend developer on different modules of their web app.",
+    ],
+    summary:
+      "Worked as a freelancer frontend developer on different modules of their web app.",
+    links: [
+      {
+        label: "Company website",
+        href: "https://www.order.siterecon.ai/",
+      },
+    ],
+    categories: ["contract"],
   },
 ];

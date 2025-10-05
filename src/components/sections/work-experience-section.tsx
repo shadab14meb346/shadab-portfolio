@@ -16,6 +16,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SectionHeader } from "@/components/sections/section-header";
 import { workExperience } from "@/data/work-experience";
 import type { WorkExperienceEngagement } from "@/data/work-experience";
+import { cn } from "@/lib/utils";
 import { Link as LinkIcon } from "lucide-react";
 
 function ExperienceCard({
@@ -46,7 +47,12 @@ function ExperienceCard({
       />
       <CardHeader className="relative space-y-6">
         <div className="flex items-start gap-4">
-          <Avatar className="flex h-12 w-12 items-center justify-center border border-border bg-background shadow-sm">
+          <Avatar
+            className={cn(
+              "flex h-12 w-12 items-center justify-center border border-border bg-background shadow-sm",
+              engagement?.bgColor
+            )}
+          >
             {engagement.logo ? (
               <AvatarImage
                 src={engagement.logo}
@@ -139,6 +145,18 @@ function ExperienceCard({
 }
 
 export function WorkExperienceSection() {
+  const tabs = [
+    { id: "full-time", label: "Full Time" },
+    { id: "contract", label: "Contractual" },
+  ] as const;
+
+  const [activeTab, setActiveTab] =
+    useState<(typeof tabs)[number]["id"]>("full-time");
+
+  const filteredExperiences = workExperience.filter((engagement) =>
+    engagement.categories.includes(activeTab)
+  );
+
   return (
     <section id="work" className="py-20 sm:py-28">
       <div className="container space-y-12">
@@ -147,8 +165,41 @@ export function WorkExperienceSection() {
           title="Collaborations that shaped my craft"
           description="From startups to MNCs, these are the teams where I shipped complex products and mentored teams."
         />
+        <div className="border-b border-border/60 pb-1">
+          <div
+            className="flex gap-6 text-sm font-medium text-muted-foreground"
+            role="tablist"
+            aria-label="Filter experience by employment type"
+          >
+            {tabs.map((tab) => {
+              const isActive = tab.id === activeTab;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setActiveTab(tab.id)}
+                  className={cn(
+                    "relative pb-3 transition-colors hover:text-foreground focus-visible:outline-none",
+                    isActive && "text-foreground"
+                  )}
+                  role="tab"
+                  aria-selected={isActive}
+                >
+                  {tab.label}
+                  <span
+                    className={cn(
+                      "pointer-events-none absolute inset-x-0 bottom-0 h-[2px] rounded-full bg-primary/60 transition-opacity",
+                      isActive ? "opacity-100" : "opacity-0"
+                    )}
+                    aria-hidden
+                  />
+                </button>
+              );
+            })}
+          </div>
+        </div>
         <div className="grid gap-6 lg:grid-cols-2">
-          {workExperience.map((engagement) => (
+          {filteredExperiences.map((engagement) => (
             <ExperienceCard key={engagement.company} engagement={engagement} />
           ))}
         </div>

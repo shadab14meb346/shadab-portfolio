@@ -84,7 +84,7 @@ export const products: ProductEntry[] = [
     timeline: "2023 – Present",
     status: "live",
     website: "https://mockfill.com/",
-    image: "/products/mockfill.png",
+    image: "/product/mockfill.png",
     video:
       "https://pub-7b607db1849d4834b25ec56d1f6204fa.r2.dev/mockfill-demo.mp4",
     stageSummary:
@@ -115,7 +115,7 @@ export const products: ProductEntry[] = [
     timeline: "2024 – Present",
     status: "prototype",
     website: "/translategsheettm",
-    image: "/products/Demo-Translate-G-Sheet-TM-Google-Sheets.png",
+    image: "/product/Demo-Translate-G-Sheet-TM-Google-Sheets.png",
     video:
       "https://www.loom.com/embed/f2a17eac3d8e4019a0025fd9b0a3c524?sid=e50793f5-35b5-46c0-ac05-3a4f0669e6b3",
     stageSummary:
@@ -143,7 +143,7 @@ export const products: ProductEntry[] = [
     timeline: "2024",
     status: "live",
     website: "https://aitweetmate.vercel.app/",
-    image: "/products/aitweetmate.png",
+    image: "/product/aitweetmate.png",
     stageSummary:
       "Paused after authenticity backlash; exploring human-in-the-loop relaunch",
     users: "~200 users",
@@ -166,7 +166,7 @@ export const products: ProductEntry[] = [
     timeline: "2021",
     status: "dropped",
     website: "https://focuslyai.vercel.app/",
-    image: "/products/billsplit-landing-page.png",
+    image: "/product/billsplit-landing-page.png",
     stageSummary: "Dropped post-validation after extensive interviews",
     problem: "Teams drown in Slack notifications and miss priorities",
     solution:
@@ -186,7 +186,7 @@ export const products: ProductEntry[] = [
     timeline: "2020 – Present",
     status: "live",
     website: "https://fabpic.app/",
-    image: "/products/fabpic.png",
+    image: "/product/fabpic.png",
     stageSummary: "Live with LTD sales; iterating on templates and export",
     revenueOutcome: "Some LTD sales",
     problem: "Unstyled screenshots look messy in docs, decks and social posts",
@@ -210,7 +210,7 @@ export const products: ProductEntry[] = [
     timeline: "2022",
     status: "idea",
     website: "https://rendercraft.softr.app/",
-    image: "/products/rendercraft.png",
+    image: "/product/rendercraft.png",
     stageSummary: "Concept validated; paused at landing-page prototype",
     problem: "Creative automation tools feel powerful but clunky to operate",
     solution:
@@ -230,7 +230,7 @@ export const products: ProductEntry[] = [
     timeline: "2021",
     status: "closed",
     website: "https://peekletters.vercel.app/",
-    image: "/products/peekletters.png",
+    image: "/product/peekletters.png",
     stageSummary:
       "Earned revenue, proved willingness to pay; closed after channel tests",
     users: "~50 users",
@@ -253,7 +253,7 @@ export const products: ProductEntry[] = [
     timeline: "2020",
     status: "acquired",
     website: "https://tweetflick.com/",
-    image: "/products/tweetflick_dashboard.png",
+    image: "/product/tweetflick_dashboard.png",
     stageSummary: "Built → scaled to meaningful usage → micro-acquired",
     users: "10k+ users",
     revenueOutcome: "Sold for $5k",
@@ -274,7 +274,7 @@ export const products: ProductEntry[] = [
     category: "SaaS Tool",
     timeline: "2022",
     status: "poc",
-    image: "/products/easedata.png",
+    image: "/product/easedata.png",
     stageSummary:
       "POC of connectors + query + export; validated pain internally",
     problem:
@@ -296,7 +296,7 @@ export const products: ProductEntry[] = [
     category: "Shopify App",
     timeline: "2021",
     status: "dropped",
-    image: "/products/shoppable-tiktok-feed.png",
+    image: "/product/shoppable-tiktok-feed.png",
     stageSummary: "Concept resonated; paused during ecosystem ramp-up",
     problem: "Merchants wanted TikTok-like, shoppable product feeds",
     solution: "A Shopify app to build UGC-style product feeds and link to PDPs",
@@ -316,7 +316,7 @@ export const products: ProductEntry[] = [
     status: "live",
     website:
       "https://chrome.google.com/webstore/detail/word-khoj/bdocoepjnibclhlibcccnjpgeknhdlah",
-    image: "/products/word-Khoj-extension-img.png",
+    image: "/product/word-Khoj-extension-img.png",
     stageSummary: "Lightweight, still functional",
     users: "500+",
     revenueOutcome: "Free",
@@ -337,7 +337,7 @@ export const products: ProductEntry[] = [
     timeline: "2020",
     status: "prototype",
     website: "https://billsplit.biryanilabs.com",
-    image: "/products/billsplit-landing-page.png",
+    image: "/product/billsplit-landing-page.png",
     stageSummary: "Internal prototype used by a small group",
     users: "~15 users",
     problem: "Expense splits in chat get lost and messy",

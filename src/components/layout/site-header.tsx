@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
-  { label: "Projects", href: "#projects" },
   { label: "Side Projects", href: "#side-projects" },
   { label: "Skills", href: "#skills" },
   { label: "Testimonials", href: "#testimonials" },
@@ -36,7 +35,7 @@ export function SiteHeader() {
       {
         rootMargin: "-20% 0px -60% 0px",
         threshold: [0, 0.3, 0.6, 1],
-      },
+      }
     );
 
     navItems.forEach((item) => {
@@ -78,7 +77,7 @@ export function SiteHeader() {
                 "rounded-full px-4 py-2 text-sm font-medium transition-colors",
                 activeId === item.href
                   ? "bg-primary text-primary-foreground shadow"
-                  : "text-muted-foreground hover:text-foreground",
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {item.label}
@@ -116,7 +115,7 @@ export function SiteHeader() {
                   "rounded-full px-4 py-2 text-sm font-medium transition-colors",
                   activeId === item.href
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground",
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {item.label}

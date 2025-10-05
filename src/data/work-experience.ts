@@ -132,7 +132,7 @@ export const workExperience: WorkExperienceEngagement[] = [
     company: "The Cumin Club",
     logo: "/logos/cumin-club.svg",
     role: "Backend Developer",
-    employmentType: "Contract",
+    employmentType: "Freelance",
     period: "Feb 2022 – Jul 2022",
     location: "Remote",
     website: "https://www.thecuminclub.com/",

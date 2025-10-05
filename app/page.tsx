@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/sections/hero-section";
-import { ProjectsSection } from "@/components/sections/projects-section";
 import { SideProjectsSection } from "@/components/sections/side-projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 import { StoriesSection } from "@/components/sections/stories-section";
@@ -15,7 +14,6 @@ export default function HomePage() {
       <main className="flex-1">
         <HeroSection />
         <WorkExperienceSection />
-        <ProjectsSection />
         <SideProjectsSection />
         <SkillsSection />
         <TestimonialsSection />

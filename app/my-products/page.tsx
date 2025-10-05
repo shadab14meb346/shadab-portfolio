@@ -121,6 +121,9 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
     isList?: boolean;
   }>;
 
+  const previewBullets = primaryBullets.slice(0, 3);
+  const additionalBullets = primaryBullets.slice(3);
+
   const secondaryBullets = [
     { label: "Challenges", value: product.challenges },
     { label: "Learnings", value: product.learnings },
@@ -130,7 +133,7 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border/60 border-dashed bg-card/80 shadow-sm transition hover:-translate-y-1 hover:border-primary/40">
       {product.video ? (
-        <div className="relative h-48 w-full overflow-hidden border-b border-border/60">
+        <div className="relative h-76 w-full overflow-hidden border-b border-border/60">
           <video
             src={product.video}
             autoPlay
@@ -142,13 +145,13 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
           />
         </div>
       ) : product.image ? (
-        <div className="relative h-48 w-full overflow-hidden border-b border-border/60">
+        <div className="relative h-76 w-full overflow-hidden border-b border-border/60">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(min-width: 1024px) 33vw, 100vw"
           />
         </div>
       ) : null}
@@ -172,32 +175,11 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
             {product.tagline}
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          {product.website ? (
-            <Button
-              asChild
-              variant="link"
-              className="px-0 text-sm font-semibold"
-            >
-              <Link href={product.website} target="_blank" rel="noreferrer">
-                Explore →
-              </Link>
-            </Button>
-          ) : null}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="px-0 text-sm"
-            onClick={() => setExpanded((prev) => !prev)}
-          >
-            {expanded ? "Hide details" : "Read more"}
-          </Button>
-        </div>
       </div>
 
       <div className="flex flex-1 flex-col gap-4 p-6">
         <ul className="list-disc space-y-3 pl-5 text-sm text-muted-foreground">
-          {primaryBullets.map((bullet) => (
+          {previewBullets.map((bullet) => (
             <li key={bullet.label} className="space-y-1">
               <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground/80">
                 {bullet.label}
@@ -214,6 +196,24 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
             </li>
           ))}
           {expanded
+            ? additionalBullets.map((bullet) => (
+                <li key={bullet.label} className="space-y-1">
+                  <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground/80">
+                    {bullet.label}
+                  </span>
+                  {Array.isArray(bullet.value) ? (
+                    <ul className="list-disc space-y-1 pl-4 text-foreground/90">
+                      {bullet.value.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-foreground/90">{bullet.value}</p>
+                  )}
+                </li>
+              ))
+            : null}
+          {expanded
             ? secondaryBullets
                 .filter((bullet) => Boolean(bullet.value))
                 .map((bullet) => (
@@ -226,6 +226,29 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
                 ))
             : null}
         </ul>
+      </div>
+      <div className="flex items-center justify-between gap-3 border-t border-border/60 px-6 py-4">
+        <div className="flex flex-wrap items-center gap-3">
+          {product.website ? (
+            <Button
+              asChild
+              variant="link"
+              className="px-0 text-sm font-semibold"
+            >
+              <Link href={product.website} target="_blank" rel="noreferrer">
+                Explore →
+              </Link>
+            </Button>
+          ) : null}
+        </div>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="px-0 text-sm"
+          onClick={() => setExpanded((prev) => !prev)}
+        >
+          {expanded ? "Hide details" : "Read more"}
+        </Button>
       </div>
     </article>
   );

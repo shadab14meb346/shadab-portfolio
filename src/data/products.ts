@@ -35,7 +35,7 @@ export interface ProductEntry {
 
 export const products: ProductEntry[] = [
   {
-    name: "Zuribase – Sync Item Across Boards",
+    name: "Sync Item Across Boards",
     type: "Product",
     tagline: "Keep a single item synced across many Monday boards",
     category: "Monday.com App",
@@ -43,7 +43,8 @@ export const products: ProductEntry[] = [
     status: "failed",
     statusNote: "Marketplace review rejection",
     website: "https://zuribase.com/sync-item-across-boards",
-    image: "/billsplit-landing-page.png",
+    video:
+      "https://screen-studio-shareable-links.67aa83ffa7fb557cd114a7156fca4e73.r2.cloudflarestorage.com/r8UZ7dCF-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=363e5c20253db1195c87384f6dfb4c99%2F20251005%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251005T164726Z&X-Amz-Expires=7200&X-Amz-Signature=a4e2e90d2e784d800506f481e9d25495a39937ae76dda69db08be90f5bb64676&X-Amz-SignedHeaders=host&x-id=GetObject",
     stageSummary:
       "Marketplace-ready MVP rejected due to external review limits",
     users: "—",
@@ -69,6 +70,7 @@ export const products: ProductEntry[] = [
     timeline: "2023 – Present",
     status: "live",
     website: "https://mockfill.com/",
+    image: "/products/mockfill.png",
     video:
       "https://pub-7b607db1849d4834b25ec56d1f6204fa.r2.dev/mockfill-demo.mp4",
     stageSummary: "Early traction; adding AI context fill",
@@ -96,7 +98,7 @@ export const products: ProductEntry[] = [
     timeline: "2024 – Present",
     status: "prototype",
     website: "/translategsheettm",
-    image: "/Demo-Translate-G-Sheet-TM-Google-Sheets.png",
+    image: "/products/Demo-Translate-G-Sheet-TM-Google-Sheets.png",
     video:
       "https://www.loom.com/embed/f2a17eac3d8e4019a0025fd9b0a3c524?sid=e50793f5-35b5-46c0-ac05-3a4f0669e6b3",
     stageSummary: "Polished marketing site live; add-on packaging in progress",
@@ -123,7 +125,7 @@ export const products: ProductEntry[] = [
     timeline: "2024",
     status: "paused",
     website: "https://aitweetmate.vercel.app/",
-    image: "/tweetflick_dashboard.png",
+    image: "/products/tweetflick_dashboard.png",
     stageSummary: "Paused post-backlash, archived for relaunch ideas",
     users: "~200 users",
     revenueOutcome: "—",
@@ -164,7 +166,7 @@ export const products: ProductEntry[] = [
     timeline: "2020 – Present",
     status: "live",
     website: "https://fabpic.app/",
-    image: "/fabpic.png",
+    image: "/products/fabpic.png",
     stageSummary: "Actively improved post-feedback",
     revenueOutcome: "Some LTD sales",
     problem: "Raw screenshots lack polish for social sharing",
@@ -188,7 +190,7 @@ export const products: ProductEntry[] = [
     timeline: "2022",
     status: "idea",
     website: "https://rendercraft.softr.app/",
-    image: "/screely-1639061984266.png",
+    image: "/products/screely-1639061984266.png",
     stageSummary: "Landing-page-only prototype",
     problem: "Design automation tools lack UX clarity",
     solution:
@@ -208,7 +210,7 @@ export const products: ProductEntry[] = [
     timeline: "2021",
     status: "closed",
     website: "https://peekletters.vercel.app/",
-    image: "/logos/peekletters.svg",
+    image: "/products/peekletters.svg",
     stageSummary: "Earned revenue, validated offer",
     users: "~50 users",
     revenueOutcome: "₹30k",
@@ -249,7 +251,7 @@ export const products: ProductEntry[] = [
     category: "SaaS Tool",
     timeline: "2022",
     status: "poc",
-    image: "/screely-1639572723280.png",
+    image: "/products/screely-1639572723280.png",
     stageSummary: "Early internal prototype only",
     problem: "Data scattered across tools",
     solution: "Unified access via APIs to HubSpot, databases, and Sheets.",
@@ -267,7 +269,7 @@ export const products: ProductEntry[] = [
     category: "Shopify App",
     timeline: "2021",
     status: "dropped",
-    image: "/screely-1639572909567.png",
+    image: "/products/screely-1639572909567.png",
     stageSummary: "Dropped after sandbox",
     problem: "Merchants wanted UGC-like feeds",
     solution: "Shopify app concept that surfaces UGC-style product feeds.",
@@ -287,7 +289,7 @@ export const products: ProductEntry[] = [
     status: "live",
     website:
       "https://chrome.google.com/webstore/detail/word-khoj/bdocoepjnibclhlibcccnjpgeknhdlah",
-    image: "/word-Khoj-extension.png",
+    image: "/products/word-Khoj-extension.png",
     stageSummary: "Still functional",
     users: "500+",
     revenueOutcome: "Free",
@@ -308,7 +310,7 @@ export const products: ProductEntry[] = [
     timeline: "2020",
     status: "prototype",
     website: "https://billsplit.biryanilabs.com",
-    image: "/billsplit-landing-page.png",
+    image: "/products/billsplit-landing-page.png",
     stageSummary: "Internal project",
     users: "~15 users",
     problem: "Bill-splitting in chat is messy",

@@ -67,8 +67,8 @@ export function SideProjectsSection() {
                           badge === "Live"
                             ? "success"
                             : badge === "Slack App"
-                            ? "outline"
-                            : "muted";
+                              ? "outline"
+                              : "muted";
                         return (
                           <Badge key={badge} variant={variant}>
                             {badge}

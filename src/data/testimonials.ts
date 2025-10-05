@@ -8,35 +8,35 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     name: "Miguel Prieto",
-    avatar: "/jmigueprieto.jpeg",
+    avatar: "/testimonials/jmigueprieto.jpeg",
     href: "https://www.linkedin.com/in/jmigueprieto/",
     quote:
       "Shadab is an amazing software engineer! Not only he is a great problem-solver and a skillful software developer; he is also a very dedicated, motivated and positive one. He is a doer, he is adaptable and he is constantly looking for ways to improve things. He is a team player. He produces quality code at a great speed and with a smile. It's just a pleasure to work with someone that has the skills and enthusiasm that Shadab has.",
   },
   {
     name: "Rishabh Garg",
-    avatar: "/rishabh-garg.jpeg",
+    avatar: "/testimonials/rishabh-garg.jpeg",
     href: "https://www.linkedin.com/in/rishabhgarg7/",
     quote:
       "I worked with Shadab as partner on our indie product called Tweetflick. He's good javascript and react developer and was able to build new features and requests in record time. He's a fast learner and able to pick up new things pretty fast which is too much important in a startup kind of ecosystem.",
   },
   {
     name: "Tabrez Khan",
-    avatar: "/tabrez_khan.jpeg",
+    avatar: "/testimonials/tabrez_khan.jpeg",
     href: "https://www.linkedin.com/in/iamtabrezkhan/",
     quote:
       "Shadab and I met at Pesto, where we were both enrolled in the same batch. We had worked together on previous projects before joining as well. He is an excellent programmer with skills across JavaScript frameworks like ReactJS and NodeJS; he also proved his leadership abilities by taking ownership of tasks while mentoring other devs when they needed help. Not only does Shadab have a knack for programming clean code that is easy to maintain, but he's one heck of a cool guy too!",
   },
   {
     name: "Sravani Akuthota",
-    avatar: "/sravani-akuthota.jpeg",
+    avatar: "/testimonials/sravani-akuthota.jpeg",
     href: "https://www.linkedin.com/in/sravani-akuthota/",
     quote:
       "Shadab is great frontend developer and so much passionate on what he is doing. We were part of the same group but didn't work together, but we still kept in touch after leaving the company and have some amazing discussions on different subjects. He is so much interested in helping dev community and also mentored in bootstrapping my web developing journey. All in all he is an amazing friend and a cheerful guy.",
   },
   {
     name: "Pavan Kumar Raju Chamarthi",
-    avatar: "/pavan-kumar-raju-chamarthi.jpeg",
+    avatar: "/testimonials/pavan-kumar-raju-chamarthi.jpeg",
     href: "https://www.linkedin.com/in/pavan-kumar-raju-chamarthi-154389125/",
     quote:
       "I worked with Shadab in the same team on the same project in which he was a backend and blockchain developer. He has great problem-solving skills. He is a very dedicated developer, whatever tasks he was assigned he accomplish it always. Even as a fresher in the team he had a great attitude to take up responsibilities and get it done.",

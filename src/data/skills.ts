@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Lightbulb, Share2, TestTube2, UserCheck } from "lucide-react";
+import { Lightbulb, Share2, UserCheck } from "lucide-react";
 
 export interface Skill {
   name: string;

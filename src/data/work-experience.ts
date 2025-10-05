@@ -41,7 +41,7 @@ export const workExperience: WorkExperienceEngagement[] = [
         href: "https://www.airbase.com/",
       },
     ],
-    categories: ["full-time"],
+    categories: ["contract"],
   },
   {
     company: "Magically AI",

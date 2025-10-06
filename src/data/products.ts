@@ -48,7 +48,7 @@ export const products: ProductEntry[] = [
     statusNote: "Rejected during Monday marketplace review",
     website: "https://zuribase.com/sync-item-across-boards",
     video:
-      "https://screen-studio-shareable-links.67aa83ffa7fb557cd114a7156fca4e73.r2.cloudflarestorage.com/I2xQI3rk-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=363e5c20253db1195c87384f6dfb4c99%2F20251005%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251005T173625Z&X-Amz-Expires=7200&X-Amz-Signature=d5fa991e65dcab0e518c543134ec8a8b578ebd370dc759d6cb2583da4500d4b8&X-Amz-SignedHeaders=host&x-id=GetObject",
+      "https://pub-42624a5960c94335a1204f73846ba27e.r2.dev/r8UZ7dCF-video.mp4",
     stageSummary:
       "Built a marketplace-ready app that synced items, subitems, updates and matching columns across boards; blocked by platform review constraints",
     users: "Beta tests with small teams",
@@ -72,7 +72,7 @@ export const products: ProductEntry[] = [
     links: [
       {
         label: "Watch Demo",
-        href: "https://screen-studio-shareable-links.67aa83ffa7fb557cd114a7156fca4e73.r2.cloudflarestorage.com/I2xQI3rk-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=363e5c20253db1195c87384f6dfb4c99%2F20251005%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251005T173625Z&X-Amz-Expires=7200&X-Amz-Signature=d5fa991e65dcab0e518c543134ec8a8b578ebd370dc759d6cb2583da4500d4b8&X-Amz-SignedHeaders=host&x-id=GetObject",
+        href: "https://screen.studio/share/r8UZ7dCF",
       },
     ],
   },

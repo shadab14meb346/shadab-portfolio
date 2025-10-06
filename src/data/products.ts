@@ -79,7 +79,13 @@ export const products: ProductEntry[] = [
   {
     name: "MockFill",
     type: "Product",
-    tagline: "Stop retyping dummy data — autofill forms in one click",
+    tagline:
+      "Stop retyping dummy data. Autofill forms with test data in one click",
+    stageSummary: "Growing user base and traction with devs & QA usage",
+    problem:
+      "Developers and QA waste time typing dummy values while testing forms and it wastes a lot of time which should be used for more important things",
+    solution:
+      "A browser extension that detects inputs and fills mock data (field-by-field or entire form in one go), saving hours for testers and developers",
     category: "Chrome Extension",
     timeline: "2023 – Present",
     status: "live",
@@ -87,23 +93,17 @@ export const products: ProductEntry[] = [
     image: "/products/mockfill.png",
     video:
       "https://pub-7b607db1849d4834b25ec56d1f6204fa.r2.dev/mockfill-demo.mp4",
-    stageSummary:
-      "Growing dev/QA usage; expanding input coverage and AI context-fill",
     users: "Thousands (developers/testers)",
     revenueOutcome: "Free (MVP)",
-    problem:
-      "Developers and QA waste time typing names, emails and sample values while testing flows",
-    solution:
-      "A browser extension that detects inputs and fills realistic mock data (field-by-field or entire form) with optional AI context",
     role: "Product, Design, Eng",
-    stack: "TypeScript, React, MV3",
+    stack: "TypeScript, React, Tailwind CSS",
     highlights: [
-      "Fast UX with visible injection controls and reliable autofill",
-      "Adopted in QA workflows and internal dev loops",
+      "Simplest UX for adding custom rules to generate relevant mock data as per the project context",
+      "Minimal setup need, start filling the forms with test data in less then a minute",
     ],
-    challenges: "Edge cases on custom components; monetization strategy",
+    challenges: "Monetization strategy",
     learnings:
-      "Deliver time savings immediately; monetize after strong utility",
+      "Deliver time savings immediately, monetize after strong utility",
     skills: "Chrome APIs, UX research, developer productivity",
   },
   {
@@ -138,23 +138,25 @@ export const products: ProductEntry[] = [
   {
     name: "AITweetMate",
     type: "Product",
-    tagline: "AI reply suggestions that match your tone on X",
+    tagline:
+      "AI reply suggestions that match your tone, persona and goals on X(Twitter)",
+    stageSummary:
+      "Stopped working on it, after authenticity backlash on X, people don't like AI replies",
+    problem:
+      "Replying thoughtfully at scale on X is time-consuming, and small accounts growth is dependent on replies",
+    solution:
+      "Tone-matched reply suggestions using tweet context and about the user personality, goals etc, with quick editing before posting",
     category: "Chrome Extension",
     timeline: "2024",
     status: "live",
     website: "https://aitweetmate.vercel.app/",
     image: "/products/aitweetmate.png",
-    stageSummary:
-      "Paused after authenticity backlash; exploring human-in-the-loop relaunch",
-    users: "~200 users",
-    revenueOutcome: "—",
-    problem: "Replying thoughtfully at scale on X is time-consuming",
-    solution:
-      "Tone-matched reply suggestions using tweet context and prompts, with quick editing before posting",
+    users: "~20 users",
+    revenueOutcome: "Free/ BYOK Modal",
     role: "Product, Design, Marketing",
-    stack: "Next.js, OpenAI API",
-    highlights: ["Early creator interest and feedback loops"],
-    challenges: "Perceived authenticity; UX must keep user in control",
+    stack: "ReactJS, OpenAI API, Chrome Extension API",
+    highlights: ["Built to solve my own problem"],
+    challenges: "People don't like AI replies, so lost motivation due to this",
     learnings: "AI assistance should feel collaborative, not automated",
     skills: "Prompt design, AI UX, creator workflows",
   },

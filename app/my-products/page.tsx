@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -12,23 +12,23 @@ import { products } from "@/data/products";
 import { cn } from "@/lib/utils";
 import { SiteFooter } from "@/components/layout/site-footer";
 
-export const metadata: Metadata = {
-  title: "Products & Experiments | Shadab",
-  description:
-    "A portfolio of products, experiments, and side projects shipped by Shadab — spanning Chrome extensions, Slack apps, SaaS tools, and acquired products.",
-  openGraph: {
-    title: "Products & Experiments | Shadab",
-    description:
-      "Explore the archive of products and experiments that Shadab has designed, engineered, and shipped.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Products & Experiments | Shadab",
-    description:
-      "Chrome extensions, Slack apps, SaaS experiments, and acquired side projects by Shadab.",
-  },
-};
+// const metadata: Metadata = {
+//   title: "Products & Experiments | Shadab",
+//   description:
+//     "A portfolio of products, experiments, and side projects shipped by Shadab — spanning Chrome extensions, Slack apps, SaaS tools, and acquired products.",
+//   openGraph: {
+//     title: "Products & Experiments | Shadab",
+//     description:
+//       "Explore the archive of products and experiments that Shadab has designed, engineered, and shipped.",
+//     type: "website",
+//   },
+//   twitter: {
+//     card: "summary",
+//     title: "Products & Experiments | Shadab",
+//     description:
+//       "Chrome extensions, Slack apps, SaaS experiments, and acquired side projects by Shadab.",
+//   },
+// };
 
 const statusStyles: Record<string, string> = {
   live: "bg-emerald-500/10 text-emerald-500 border border-emerald-500/30",

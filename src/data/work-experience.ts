@@ -30,7 +30,7 @@ export const workExperience: WorkExperienceEngagement[] = [
     summary:
       "Owning internal tooling and product experience initiatives across the Airbase spend management platform.",
     highlights: [
-      "Shipped an internal coordination tool that saves engineering and product teams 100+ hours every week.",
+      "Shipped an internal coordination tool that saves engineering and product teams 10+ hours every week.",
       "Led the bulk vendor import feature that cut first-payment onboarding time by 53% for new customers.",
       "Standardized a reusable UI component system that eliminated thousands of lines of duplicate code.",
       "Ramped up on unfamiliar product areas to deliver enterprise-critical features on compressed timelines.",
